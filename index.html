@@ -735,16 +735,383 @@
         grid-template-columns: 1fr;
       }
     }
+
+    :root {
+      --bg: #f4f7fc;
+      --surface-2: #eef3fb;
+      --muted: #526078;
+      --primary-2: #3156d9;
+      --accent: #f0a536;
+      --accent-2: #ea713e;
+      --border: #e1e7f0;
+      --shadow: 0 22px 55px rgba(20, 35, 70, 0.09);
+      --radius: 22px;
+    }
+
+    html {
+      scroll-padding-top: 92px;
+    }
+
+    body {
+      background:
+        radial-gradient(ellipse at 85% 3%, rgba(49, 86, 217, 0.08), transparent 34rem),
+        var(--bg);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #f0a536;
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 0.75rem;
+      left: 0.75rem;
+      z-index: 1200;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--primary);
+      transform: translateY(-160%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    header {
+      top: 0;
+      right: 0;
+      bottom: auto;
+      width: 100%;
+      padding: 0.7rem 0;
+      transform: none;
+      background: rgba(12, 20, 42, 0.96);
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-wrap {
+      width: min(1180px, 92%);
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .sidebar-profile {
+      width: auto;
+      padding: 0;
+      border: 0;
+    }
+
+    .sidebar-profile .avatar-wrap {
+      width: 48px;
+      height: 48px;
+      margin: 0;
+    }
+
+    .sidebar-profile h3 {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .sidebar-profile p {
+      font-size: 0.72rem;
+    }
+
+    nav {
+      width: auto;
+      margin-left: auto;
+    }
+
+    nav ul {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    nav a {
+      padding: 0.65rem 0.8rem;
+      font-size: 0.88rem;
+    }
+
+    nav a:hover {
+      transform: none;
+    }
+
+    .sidebar-btn {
+      width: auto;
+      margin: 0;
+      padding: 0.72rem 1.05rem;
+    }
+
+    .menu-toggle,
+    .menu-overlay {
+      display: none;
+    }
+
+    .hero {
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
+
+    .typing-wrap {
+      margin-bottom: 2.2rem;
+    }
+
+    .typing-text {
+      min-height: 0;
+      padding: 0.55rem 1rem;
+      border: 1px solid rgba(49, 86, 217, 0.14);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--primary-2);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      white-space: normal;
+    }
+
+    .typing-text::after {
+      content: none;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.8rem, 6vw, 5.4rem);
+      letter-spacing: -0.065em;
+    }
+
+    .hero-text p {
+      font-size: 1.08rem;
+      line-height: 1.85;
+    }
+
+    .hero-card {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 28px 65px rgba(15, 23, 42, 0.19);
+    }
+
+    section:not(.hero) {
+      scroll-margin-top: 82px;
+    }
+
+    .section-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-header h2 {
+      letter-spacing: -0.045em;
+    }
+
+    .service-card,
+    .social-card,
+    .brand-card,
+    .about-card,
+    .contact-side {
+      box-shadow: 0 12px 34px rgba(20, 35, 70, 0.05);
+    }
+
+    .service-card,
+    .social-card {
+      padding: 1.7rem;
+    }
+
+    .social-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .social-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 205px;
+    }
+
+    .social-card .icon-box {
+      width: 46px;
+      height: 46px;
+      margin-bottom: 1rem;
+      border-radius: 15px;
+    }
+
+    .social-card h3 {
+      font-size: 1.15rem;
+    }
+
+    .social-card p {
+      flex: 1;
+    }
+
+    .social-card a {
+      align-self: flex-start;
+      margin-top: 1.1rem;
+    }
+
+    .social-card a::after {
+      content: " ↗";
+    }
+
+    .contact-card {
+      background:
+        radial-gradient(circle at 100% 0, rgba(78, 112, 229, 0.5), transparent 55%),
+        linear-gradient(135deg, var(--primary), #14285c);
+    }
+
+    .btn {
+      min-height: 48px;
+    }
+
+    footer {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 900px) {
+      .nav-wrap {
+        gap: 0.6rem;
+      }
+
+      nav a {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.82rem;
+      }
+
+      .sidebar-btn {
+        padding: 0.65rem 0.8rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      html {
+        scroll-padding-top: 18px;
+      }
+
+      header {
+        top: 0;
+        right: auto;
+        bottom: 0;
+        width: min(340px, 88vw);
+        padding: 1.5rem 1rem;
+        transform: translateX(-105%);
+        transition: transform 0.3s ease;
+      }
+
+      header.open {
+        transform: translateX(0);
+      }
+
+      .nav-wrap {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 1.4rem;
+      }
+
+      .sidebar-profile {
+        width: 100%;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+      }
+
+      .sidebar-profile .avatar-wrap {
+        width: 64px;
+        height: 64px;
+      }
+
+      nav {
+        width: 100%;
+        margin: 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.45rem;
+      }
+
+      nav a {
+        padding: 0.85rem 0.95rem;
+        font-size: 0.96rem;
+      }
+
+      .sidebar-btn {
+        width: 100%;
+        margin-top: auto;
+        padding: 0.9rem 1.25rem;
+      }
+
+      .menu-toggle {
+        top: 14px;
+        left: auto;
+        right: 14px;
+        display: flex;
+        width: 46px;
+        height: 46px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+        background: var(--primary);
+        box-shadow: 0 8px 22px rgba(15, 23, 42, 0.2);
+      }
+
+      .menu-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 900;
+        display: block;
+        border: 0;
+        background: rgba(7, 12, 25, 0.48);
+      }
+
+      .menu-overlay[hidden] {
+        display: none;
+      }
+
+      body.nav-open {
+        overflow: hidden;
+      }
+
+      .hero {
+        padding-top: 96px;
+      }
+
+      .typing-wrap {
+        padding-right: 3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-text h1 {
+        font-size: clamp(2.7rem, 12vw, 4.2rem);
+      }
+
+      .social-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
 <body>
-  <button class="menu-toggle" aria-label="Open navigation menu">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <button class="menu-toggle" aria-label="Open navigation menu" aria-controls="site-navigation" aria-expanded="false">
     <span></span>
     <span></span>
     <span></span>
   </button>
+  <button class="menu-overlay" aria-label="Close navigation menu" hidden></button>
 
-  <header>
+  <header id="site-navigation">
     <div class="container nav-wrap">
       <div class="sidebar-profile">
         <div class="avatar-wrap">
@@ -755,7 +1122,7 @@
           <p>Political Scientist • Researcher • Digital Marketer</p>
         </div>
       </div>
-      <nav>
+      <nav aria-label="Main navigation">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Me</a></li>
@@ -768,10 +1135,11 @@
     </div>
   </header>
 
+  <main id="main">
   <section class="hero" id="home">
     <div class="container">
       <div class="typing-wrap">
-        <div id="typingText" class="typing-text"></div>
+        <p id="typingText" class="typing-text">Welcome to M. Suleman Official</p>
       </div>
       <div class="hero-grid">
         <div class="hero-card">
@@ -891,26 +1259,43 @@
       </div>
       <div class="social-grid">
         <div class="social-card">
+          <div class="icon-box" aria-hidden="true">YT</div>
           <h3>YouTube</h3>
           <p>M Suleman Official</p>
           <a href="https://www.youtube.com/@MuhammadSuleman-07" target="_blank" rel="noopener noreferrer">Visit Channel</a>
         </div>
         <div class="social-card">
+          <div class="icon-box" aria-hidden="true">TT</div>
           <h3>TikTok</h3>
-          <p>@m.sulemanofficial</p>
-          <a href="https://www.tiktok.com/@m.sulemanofficial" target="_blank" rel="noopener noreferrer">Follow Now</a>
+          <p>@m.suleman_official</p>
+          <a href="https://www.tiktok.com/@m.suleman_official?_r=1&amp;_t=ZS-9A55E45tjl6" target="_blank" rel="noopener noreferrer">Follow Now</a>
         </div>
         <div class="social-card">
+          <div class="icon-box" aria-hidden="true">f</div>
+          <h3>Facebook Profile</h3>
+          <p>Personal profile</p>
+          <a href="https://www.facebook.com/share/19hrTnwHkv/" target="_blank" rel="noopener noreferrer">View Profile</a>
+        </div>
+        <div class="social-card">
+          <div class="icon-box" aria-hidden="true">f</div>
           <h3>Facebook</h3>
-          <p>M Suleman Official</p>
-          <a href="https://web.facebook.com/profile.php?id=61590990322240" target="_blank" rel="noopener noreferrer">Open Page</a>
+          <p>M Suleman Official page</p>
+          <a href="https://www.facebook.com/share/1DbyynYGL2/" target="_blank" rel="noopener noreferrer">Open Page</a>
         </div>
         <div class="social-card">
+          <div class="icon-box" aria-hidden="true">IG</div>
+          <h3>Instagram</h3>
+          <p>@m.suleman_official</p>
+          <a href="https://www.instagram.com/m.suleman_official?stkn=MXZ5eG92YnV6bjBvMQ==" target="_blank" rel="noopener noreferrer">View Instagram</a>
+        </div>
+        <div class="social-card">
+          <div class="icon-box" aria-hidden="true">in</div>
           <h3>LinkedIn</h3>
           <p>Professional profile</p>
           <a href="https://www.linkedin.com/in/muhammad-suleman-7b7760407/" target="_blank" rel="noopener noreferrer">Connect</a>
         </div>
         <div class="social-card">
+          <div class="icon-box" aria-hidden="true">FW</div>
           <h3>Freelance</h3>
           <p>Fiverr / Upwork</p>
           <a href="https://www.fiverr.com/msuleman_01" target="_blank" rel="noopener noreferrer">Hire Me</a>
@@ -940,47 +1325,46 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer>
     <div class="container">© 2026 Muhammad Suleman | All Rights Reserved</div>
   </footer>
 
   <script>
-    const text = 'Welcome to M. Suleman Official';
-    const typingElement = document.getElementById('typingText');
-    let index = 0;
-    const duration = 3000;
-    const delay = Math.max(1, Math.floor(duration / text.length));
-
-    function typeText() {
-      if (index < text.length) {
-        typingElement.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeText, delay);
-      } else {
-        typingElement.classList.add('done');
-      }
-    }
-
-    typeText();
-
     const menuToggle = document.querySelector('.menu-toggle');
     const header = document.querySelector('header');
+    const menuOverlay = document.querySelector('.menu-overlay');
     const navLinks = document.querySelectorAll('nav a');
 
-    if (menuToggle && header) {
-      menuToggle.addEventListener('click', () => {
-        header.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', header.classList.contains('open') ? 'true' : 'false');
-      });
-
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          header.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        });
-      });
+    function setMenuOpen(isOpen) {
+      header.classList.toggle('open', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      menuOverlay.hidden = !isOpen;
+      header.inert = window.matchMedia('(max-width: 900px)').matches && !isOpen;
     }
+
+    setMenuOpen(false);
+
+    menuToggle.addEventListener('click', () => {
+      setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    menuOverlay.addEventListener('click', () => setMenuOpen(false));
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => setMenuOpen(false));
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false);
+      }
+    });
+
+    window.addEventListener('resize', () => setMenuOpen(false));
   </script>
 </body>
 </html>
