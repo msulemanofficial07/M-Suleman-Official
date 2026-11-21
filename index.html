@@ -496,9 +496,10 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 2rem;
-      align-items: center;
+      grid-template-columns: 1fr;
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
     }
 
     .about-card,
@@ -1212,7 +1213,17 @@
       }
 
       .hero-card .mini-grid {
-        display: none;
+        max-width: 520px;
+        margin: 0 auto;
+        gap: 0.45rem;
+      }
+
+      .hero-card .mini-box {
+        padding: 0.35rem;
+      }
+
+      .hero-card .mini-box strong {
+        font-size: 1rem;
       }
 
       .typing-wrap {
@@ -1359,7 +1370,7 @@
             <img src="ChatGPT Image Jun 5, 2026, 01_36_18 AM.png" alt="Muhammad Suleman profile picture">
           </div>
           <h3>Muhammad Suleman</h3>
-          <p>Research • Content • Digital Growth</p>
+          <p>Research-driven strategist focused on knowledge, content, and digital growth</p>
           <div class="mini-grid">
             <div class="mini-box"><strong>10+</strong><span>Skills</span></div>
             <div class="mini-box"><strong>4+</strong><span>Platforms</span></div>
