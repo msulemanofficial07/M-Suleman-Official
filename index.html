@@ -865,13 +865,15 @@
     .typing-text {
       min-height: 0;
       padding: 0.55rem 1rem;
-      border: 1px solid rgba(49, 86, 217, 0.14);
+      border: 1px solid rgba(240, 165, 54, 0.65);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.75);
-      color: var(--primary-2);
+      background: linear-gradient(135deg, #14285c, #3156d9);
+      color: #fff;
       font-size: 0.78rem;
+      font-weight: 800;
       letter-spacing: 0.14em;
       white-space: normal;
+      box-shadow: 0 10px 24px rgba(20, 40, 92, 0.22);
     }
 
     .typing-text::after {
@@ -1362,7 +1364,7 @@
   <section class="hero" id="home">
     <div class="container">
       <div class="typing-wrap">
-        <p id="typingText" class="typing-text">Welcome to M. Suleman Official</p>
+        <p id="typingText" class="typing-text">WELCOME TO M. SULEMAN OFFICIAL</p>
       </div>
       <div class="hero-grid">
         <div class="hero-card">
@@ -1408,19 +1410,16 @@
           <h2>About Me</h2>
         </div>
         <p>
-          I am Muhammad Suleman, a researcher, writer, and digital creator with a strong interest in political science and public affairs.
+          I am Muhammad Suleman, a passionate learner, researcher, writer, and digital creator with a strong interest in political science, journalism, public affairs, and modern communication.
         </p>
         <p>
-          I enjoy exploring how ideas, media, and technology shape society. Curiosity and critical thinking guide the way I learn and work.
+          My journey is driven by curiosity, critical thinking, and the desire to understand how ideas, media, and technology shape society.
         </p>
         <p>
-          My skills include journalism, content creation, digital marketing, SEO, e-commerce, web design, and video editing.
+          Over time, I have developed skills in content creation, digital marketing, SEO, local SEO, e-commerce growth, web design, and video editing. I believe that knowledge becomes meaningful when it is shared clearly, ethically, and creatively. That is why I focus on creating content and strategies that educate, inspire, and help people and businesses grow.
         </p>
         <p>
-          I bring research, storytelling, and digital strategy together to create useful content and help brands grow online.
-        </p>
-        <p>
-          Whatever the project, I aim to deliver thoughtful, clear, and professional work that creates real value.
+          My work combines research, storytelling, and strategy. Whether I am analyzing political developments, building online visibility for a brand, creating engaging content, or improving digital presence, my goal is always the same: to deliver value with professionalism, honesty, and purpose.
         </p>
         <div class="quote">“Knowledge is not power until it serves humanity.”</div>
       </div>
@@ -1562,6 +1561,30 @@
   </footer>
 
   <script>
+    const typingText = document.querySelector('#typingText');
+    const welcomeMessage = 'WELCOME TO M. SULEMAN OFFICIAL';
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      typingText.textContent = welcomeMessage;
+      typingText.classList.add('done');
+    } else {
+      typingText.textContent = '';
+      let characterIndex = 0;
+
+      function typeWelcomeMessage() {
+        characterIndex += 1;
+        typingText.textContent = welcomeMessage.slice(0, characterIndex);
+
+        if (characterIndex < welcomeMessage.length) {
+          window.setTimeout(typeWelcomeMessage, 70);
+        } else {
+          typingText.classList.add('done');
+        }
+      }
+
+      window.setTimeout(typeWelcomeMessage, 250);
+    }
+
     const menuToggle = document.querySelector('.menu-toggle');
     const header = document.querySelector('header');
     const menuOverlay = document.querySelector('.menu-overlay');
