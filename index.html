@@ -1183,23 +1183,56 @@
 
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-        max-width: 760px;
+        gap: 1.1rem;
+        max-width: 720px;
         margin: 0 auto;
       }
 
       .hero-card {
-        width: min(520px, 100%);
+        width: min(620px, 100%);
         margin: 0 auto;
+        padding: 1.1rem 1.3rem;
+      }
+
+      .hero-card .avatar-wrap {
+        width: 112px;
+        height: 112px;
+        margin-bottom: 0.55rem;
+      }
+
+      .hero-card h3 {
+        font-size: 1.35rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .hero-card p {
+        max-width: 48ch;
+        margin: 0 auto 0.7rem;
+        line-height: 1.55;
+      }
+
+      .hero-card .mini-grid {
+        display: none;
+      }
+
+      .typing-wrap {
+        margin-bottom: 1rem;
       }
 
       .hero-text {
         text-align: center;
       }
 
+      .hero-text h1 {
+        margin-bottom: 0.55rem;
+        font-size: clamp(2.7rem, 4.5vw, 3.7rem);
+      }
+
       .hero-text p {
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 1.1rem;
+        line-height: 1.65;
       }
 
       .hero-actions {
@@ -1326,7 +1359,7 @@
             <img src="ChatGPT Image Jun 5, 2026, 01_36_18 AM.png" alt="Muhammad Suleman profile picture">
           </div>
           <h3>Muhammad Suleman</h3>
-          <p>Research-driven strategist focused on knowledge, content, and digital growth</p>
+          <p>Research • Content • Digital Growth</p>
           <div class="mini-grid">
             <div class="mini-box"><strong>10+</strong><span>Skills</span></div>
             <div class="mini-box"><strong>4+</strong><span>Platforms</span></div>
@@ -1339,7 +1372,8 @@
           <!-- <h2>Welcome to My Official Website</h2> -->
           <h1>Muhammad Suleman</h1>
           <p>
-            Political Scientist • Critical Thinker • Journalist • Researcher • Content Creator • Digital Marketer • SEO & Local SEO • E-Commerce Business • Web Designer • Video Editor
+            Political Scientist • Researcher • Journalist<br>
+            Digital Marketer • SEO Specialist • Web Designer
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Let’s Work Together</a>
