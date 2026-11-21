@@ -1125,8 +1125,28 @@
       }
 
       .hero-grid {
-        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .hero-card {
+        width: min(520px, 100%);
+        margin: 0 auto;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
       }
 
       .hero-text h1 {
@@ -1159,6 +1179,31 @@
     @media (min-width: 901px) and (max-width: 1400px) {
       .nav-wrap {
         gap: 0.55rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .hero-card {
+        width: min(520px, 100%);
+        margin: 0 auto;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
       }
 
       .sidebar-profile p {
