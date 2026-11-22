@@ -221,7 +221,7 @@
 
     .portrait-card {
       position: relative;
-      max-width: 390px;
+      max-width: 330px;
       margin-inline: auto;
       padding: 18px;
       border: 1px solid var(--line);
@@ -262,6 +262,34 @@
       color: #9e5b20;
       font-size: 0.72rem;
       font-weight: 800;
+    }
+    .portrait-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .portrait-stat {
+      min-width: 0;
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--canvas);
+      text-align: center;
+    }
+    .portrait-stat strong {
+      display: block;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 1rem;
+      line-height: 1.1;
+    }
+    .portrait-stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 700;
     }
 
     .about-layout {
@@ -349,7 +377,8 @@
 
     .brands-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: minmax(0, 760px);
+      justify-content: center;
       gap: 20px;
     }
     .brand-card {
@@ -624,6 +653,12 @@
             <strong>Muhammad Suleman</strong>
             <span>Pakistan</span>
           </figcaption>
+          <div class="portrait-stats" aria-label="Professional overview">
+            <div class="portrait-stat"><strong>10+</strong><span>Skills</span></div>
+            <div class="portrait-stat"><strong>4+</strong><span>Platforms</span></div>
+            <div class="portrait-stat"><strong>100%</strong><span>Passionate</span></div>
+            <div class="portrait-stat"><strong>24/7</strong><span>Growth Focus</span></div>
+          </div>
         </figure>
       </div>
     </section>
@@ -704,34 +739,20 @@
           <h2>Ideas built into digital platforms</h2>
         </header>
         <div class="brands-grid">
-          <article class="brand-card">
-            <div class="brand-logo">MSO</div>
-            <h3>M Suleman Official</h3>
-            <p class="brand-kicker">Educational Content | Knowledge | Awareness</p>
-            <p>M Suleman Official is my Urdu content brand, dedicated to educational, informative, and awareness-based content.</p>
-            <ul class="focus-list">
-              <li>Political Science &amp; current affairs</li>
-              <li>Social issues</li>
-              <li>History</li>
-              <li>Science &amp; technology</li>
-              <li>Space &amp; the universe</li>
-              <li>Educational videos &amp; podcasts</li>
-            </ul>
-            <p class="brand-mission"><strong>Mission:</strong> To make useful knowledge accessible through informative, engaging, and thought-provoking content.</p>
-            <a class="btn btn-secondary" href="https://www.youtube.com/@MuhammadSuleman-07" target="_blank" rel="noopener noreferrer">Explore M Suleman Official</a>
-          </article>
           <article class="brand-card featured">
             <div class="brand-logo">SDF</div>
             <h3>Suleman Digital Frontier</h3>
             <p class="brand-kicker">Digital Marketing | SEO | Website Development</p>
             <p>Suleman Digital Frontier helps individuals, entrepreneurs, and businesses strengthen their digital presence.</p>
             <ul class="focus-list">
-              <li>Digital marketing</li>
-              <li>SEO &amp; local SEO</li>
-              <li>Niche &amp; competitor research</li>
+              <li>Niche research</li>
+              <li>Competitor analysis</li>
+              <li>SEO services</li>
+              <li>Local SEO</li>
               <li>Website development</li>
               <li>E-commerce solutions</li>
-              <li>Content strategy &amp; branding</li>
+              <li>Content strategy &amp; writing</li>
+              <li>Branding &amp; digital strategy</li>
             </ul>
             <p class="brand-mission"><strong>Building the Digital Future.</strong><br>Mission: practical digital solutions that help businesses establish, improve, and grow their online presence.</p>
             <a class="btn btn-orange" href="#services">Explore SDF services</a>
