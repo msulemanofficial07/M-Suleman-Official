@@ -1,1540 +1,595 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Suleman | Political Science Student & Digital Marketing Specialist</title>
-  <meta name="description" content="Explore Muhammad Suleman's portfolio, Political Science and research interests, content creation, digital marketing, SEO, website development, and e-commerce expertise.">
+  <meta name="description" content="Portfolio of Muhammad Suleman, a Political Science student, content creator, and digital marketing specialist offering research, SEO, website development, and e-commerce expertise.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f5f7fb;
-      --surface: #ffffff;
-      --surface-2: #f8fafc;
-      --text: #0f172a;
-      --muted: #5b647a;
-      --primary: #0f172a;
-      --primary-2: #1d4ed8;
-      --accent: #f59e0b;
-      --accent-2: #f97316;
-      --border: #e2e8f0;
-      --shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+      --navy: #101a2f;
+      --navy-2: #1b2b4b;
+      --blue: #3559a8;
+      --orange: #d98532;
+      --orange-soft: #fbf1e7;
+      --ink: #182033;
+      --muted: #667085;
+      --line: #e7eaf0;
+      --paper: #ffffff;
+      --canvas: #f5f7fa;
       --radius: 18px;
-      --max-width: 1180px;
+      --shadow: 0 18px 50px rgba(16, 26, 47, 0.08);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
     body {
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.65;
       overflow-x: hidden;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: "Manrope", sans-serif; letter-spacing: -0.02em; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    section[id] { scroll-margin-top: 88px; }
+    section { padding: 88px 0; }
+    .section-heading { max-width: 720px; margin-bottom: 38px; }
+    .section-heading.center { margin-inline: auto; text-align: center; }
+    .eyebrow {
       display: block;
+      margin-bottom: 10px;
+      color: var(--orange);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
+    .section-heading h2 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.08;
     }
-
-    header {
+    .section-heading p { margin-bottom: 0; color: var(--muted); }
+    .skip-link {
       position: fixed;
-      left: 0;
+      left: 16px;
+      top: -80px;
+      z-index: 9999;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--navy);
+      box-shadow: var(--shadow);
+    }
+    .skip-link:focus { top: 16px; }
+
+    .site-header {
+      position: sticky;
       top: 0;
-      bottom: 0;
-      width: 320px;
-      z-index: 1000;
-      background: linear-gradient(180deg, #0f172a, #0b1120);
-      color: #eef2ff;
-      border-right: 1px solid rgba(148, 163, 184, 0.12);
-      padding: 2rem 1rem;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
+      z-index: 100;
+      height: 72px;
+      border-bottom: 1px solid rgba(231, 234, 240, 0.9);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
     }
-
-    header.open {
-      transform: translateX(0);
-    }
-
     .nav-wrap {
+      height: 72px;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      gap: 1.2rem;
-      height: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+    }
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.82rem;
+    }
+    .main-nav ul {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .main-nav a {
+      color: #4d576b;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+    .main-nav a:hover, .main-nav a:focus-visible { color: var(--blue); }
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      width: 18px;
+      height: 2px;
+      display: block;
+      margin: 4px auto;
+      border-radius: 2px;
+      background: var(--navy);
+    }
+    .menu-overlay { display: none; }
 
-    .logo {
-      font-size: 0.95rem;
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      padding: 64px 0;
+      background:
+        linear-gradient(90deg, rgba(16, 26, 47, 0.035) 1px, transparent 1px),
+        linear-gradient(rgba(16, 26, 47, 0.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 32px 32px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+      align-items: center;
+      gap: clamp(48px, 8vw, 96px);
+    }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: var(--blue);
+      font-size: 0.82rem;
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #fff;
     }
-
-    .sidebar-profile {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-      width: 100%;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-    }
-
-    .sidebar-profile .avatar-wrap {
-      width: 76px;
-      height: 76px;
-      margin: 0;
-      flex: 0 0 auto;
-    }
-
-    .sidebar-profile h3 {
-      font-size: 1rem;
-      margin-bottom: 0.2rem;
-      color: #fff;
-    }
-
-    .sidebar-profile p {
-      font-size: 0.82rem;
-      color: #cbd5e1;
-      line-height: 1.4;
-    }
-
-    nav {
-      width: 100%;
-    }
-
-    nav ul {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      list-style: none;
-      gap: 0.45rem;
-      width: 100%;
-    }
-
-    nav a {
-      display: block;
-      color: #cbd5e1;
-      font-size: 0.96rem;
-      font-weight: 600;
-      padding: 0.78rem 0.95rem;
-      border-radius: 12px;
-      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    }
-
-    nav a:hover {
-      background: rgba(148, 163, 184, 0.1);
-      color: #fff;
-      transform: translateX(3px);
-    }
-
-    .sidebar-btn {
-      width: 100%;
-      margin-top: auto;
-    }
-
-    .menu-toggle {
-      position: fixed;
-      top: 18px;
-      left: 18px;
-      z-index: 1100;
-      width: 52px;
-      height: 52px;
-      border: 0;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-2));
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
-    }
-
-    .menu-toggle span {
-      width: 22px;
+    .hero-kicker::before {
+      content: "";
+      width: 28px;
       height: 2px;
-      background: #fff;
-      display: block;
-      border-radius: 999px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
+      background: var(--orange);
     }
-
+    .hero h1 {
+      max-width: 760px;
+      margin-bottom: 18px;
+      color: var(--navy);
+      font-size: clamp(3.2rem, 7vw, 6.1rem);
+      line-height: 0.98;
+    }
+    .hero-role {
+      max-width: 650px;
+      margin-bottom: 22px;
+      color: var(--navy-2);
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(1rem, 2vw, 1.28rem);
+      font-weight: 700;
+    }
+    .hero-summary {
+      max-width: 670px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
     .btn {
+      min-height: 48px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.45rem;
-      padding: 0.9rem 1.25rem;
-      border-radius: 999px;
-      font-weight: 600;
-      white-space: nowrap;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      padding: 12px 18px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      font-weight: 800;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
     }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
+    .btn:hover { transform: translateY(-2px); }
     .btn-primary {
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      background: var(--navy);
       color: #fff;
-      box-shadow: 0 12px 25px rgba(245, 158, 11, 0.28);
+      box-shadow: 0 12px 24px rgba(16, 26, 47, 0.16);
     }
+    .btn-secondary { border-color: var(--line); background: #fff; color: var(--navy); }
+    .btn-orange { background: var(--orange); color: #fff; }
 
-    .btn-secondary {
-      background: #fff;
-      color: var(--primary);
-      border: 1px solid var(--border);
-    }
-
-    .contact-actions {
-      display: flex;
-      gap: 0.9rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .contact-btn-whatsapp {
-      background: linear-gradient(90deg, #25d366, #128c7e);
-      color: #fff;
-      box-shadow: 0 12px 24px rgba(37, 211, 102, 0.25);
-    }
-
-    .contact-btn-email {
-      background: linear-gradient(90deg, #ea4335, #c71610);
-      color: #fff;
-      box-shadow: 0 12px 24px rgba(234, 67, 53, 0.22);
-    }
-
-    section {
-      padding: 90px 0;
-    }
-
-    .hero {
+    .portrait-card {
       position: relative;
-      overflow: hidden;
-      padding: 110px 0 80px;
-    }
-
-    .hero::before,
-    .hero::after {
-      content: '';
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      filter: blur(10px);
-      opacity: 0.5;
-      z-index: 0;
-    }
-
-    .hero::before {
-      top: 10%;
-      left: 8%;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.18), transparent 70%);
-    }
-
-    .hero::after {
-      bottom: 0;
-      right: 5%;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.12), transparent 70%);
-    }
-
-    .hero-grid {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .typing-wrap {
-      position: relative;
-      z-index: 2;
-      margin-bottom: 1.6rem;
-      text-align: center;
-    }
-
-    .typing-text {
-      display: inline-block;
-      font-size: clamp(0.95rem, 1.5vw, 1.3rem);
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--primary);
-      white-space: nowrap;
-      min-height: 1.6em;
-    }
-
-    .typing-text::after {
-      content: '';
-      display: inline-block;
-      width: 0.55em;
-      height: 1em;
-      background: var(--primary);
-      margin-left: 0.2em;
-      vertical-align: text-bottom;
-      animation: blink 0.9s step-end infinite;
-    }
-
-    .typing-text.done::after {
-      animation: none;
-      opacity: 0;
-    }
-
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-
-    .hero-text h1 {
-      font-size: clamp(3rem, 4.5vw, 5rem);
-      line-height: 1;
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-
-    .hero-text h2 {
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--primary-2);
-      margin-bottom: 1rem;
-    }
-
-    .hero-text p {
-      font-size: 1rem;
-      color: var(--muted);
-      max-width: 58ch;
-      margin-bottom: 1.8rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-bottom: 2rem;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 0.45rem 0.8rem;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: 0.88rem;
-      font-weight: 500;
-    }
-
-    .hero-card {
-      background: linear-gradient(180deg, #12214d, #0f172a);
-      color: #fff;
+      max-width: 390px;
+      margin-inline: auto;
+      padding: 18px;
+      border: 1px solid var(--line);
       border-radius: 28px;
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
+      background: #fff;
       box-shadow: var(--shadow);
     }
-
-    .hero-card::before,
-    .hero-card::after {
-      content: '';
+    .portrait-card::before {
+      content: "";
       position: absolute;
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 50%;
+      right: -12px;
+      bottom: -12px;
+      width: 75%;
+      height: 76%;
+      z-index: -1;
+      border-radius: 24px;
+      background: var(--orange-soft);
+    }
+    .portrait-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 18px;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    .portrait-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 4px 2px;
+    }
+    .portrait-label strong { color: var(--navy); }
+    .portrait-label span {
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: var(--orange-soft);
+      color: #9e5b20;
+      font-size: 0.72rem;
+      font-weight: 800;
     }
 
-    .hero-card::before {
-      width: 200px;
-      height: 200px;
-      right: -40px;
-      top: -50px;
+    .about-layout {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .about-layout .section-heading { position: sticky; top: 110px; }
+    .about-copy {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+    .about-copy p { color: var(--muted); }
+    .about-copy p:last-of-type { margin-bottom: 18px; }
+    .philosophy {
+      margin: 0;
+      padding: 18px 20px;
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+      background: var(--orange-soft);
+      color: var(--navy);
+      font-weight: 800;
     }
 
-    .hero-card::after {
-      width: 140px;
-      height: 140px;
-      left: -50px;
-      bottom: -30px;
+    .education-wrap {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      max-width: 920px;
+      margin-inline: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 12px 35px rgba(16, 26, 47, 0.05);
     }
-
-    .avatar-wrap {
-      width: 180px;
-      height: 180px;
-      margin: 0 auto 1rem;
-      border-radius: 50%;
-      overflow: hidden;
+    .education-year {
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--accent), var(--primary-2));
-      box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.08);
+      border-right: 1px solid var(--line);
+      color: var(--orange);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
     }
+    .education-content { padding: 30px; }
+    .education-content h3 { margin-bottom: 8px; color: var(--navy); }
+    .education-content p { margin: 0; color: var(--muted); }
 
-    .avatar-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hero-card h3 {
-      text-align: center;
-      font-size: 1.7rem;
-      margin-bottom: 0.7rem;
-    }
-
-    .hero-card p {
-      text-align: center;
-      color: #cbd5e1;
-      margin-bottom: 1.3rem;
-    }
-
-    .mini-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.9rem;
-    }
-
-    .mini-box {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 14px;
-      padding: 0.9rem;
-      text-align: center;
-    }
-
-    .mini-box strong {
-      display: block;
-      font-size: 1.3rem;
-      color: #fff;
-    }
-
-    .stats-wrap {
+    .skills-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-top: 2rem;
+      gap: 14px;
     }
-
-    .stat-card {
-      background: var(--surface);
+    .skill-card {
+      min-height: 220px;
+      padding: 22px;
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 1.4rem 1rem;
-      text-align: center;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+      background: #fff;
+      scroll-margin-top: 96px;
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
     }
-
-    .stat-card h3 {
-      font-size: 2rem;
-      color: var(--accent);
-      margin-bottom: 0.2rem;
+    .skill-card:hover {
+      transform: translateY(-4px);
+      border-color: #d6dce7;
+      box-shadow: 0 16px 36px rgba(16, 26, 47, 0.07);
     }
-
-    .section-header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .about-heading {
-      align-items: flex-start;
-      text-align: left;
-      margin-bottom: 1.5rem;
-    }
-
-    .section-header h2 {
-      font-size: clamp(2rem, 3vw, 3rem);
-      color: var(--primary);
-      margin-bottom: 0.6rem;
-    }
-
-    .section-header p {
-      color: var(--muted);
-      max-width: 60ch;
-    }
-
-    .about-grid {
+    .skill-icon {
+      width: 44px;
+      height: 44px;
       display: grid;
-      grid-template-columns: 1fr;
-      width: 100%;
-      max-width: 980px;
-      margin: 0 auto;
-    }
-
-    .about-card,
-    .panel {
-      background: var(--surface);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .about-card {
-      padding: 2rem;
-    }
-
-    .about-card p {
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .quote {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.9rem 1rem;
-      border-left: 4px solid var(--accent);
-      background: #fffaf0;
-      color: var(--primary);
-      font-weight: 600;
-      border-radius: 0 12px 12px 0;
-    }
-
-    .highlight-list {
-      list-style: none;
-      display: grid;
-      gap: 0.85rem;
-      padding: 1.5rem;
-    }
-
-    .highlight-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      color: var(--muted);
-    }
-
-    .highlight-list span {
-      display: inline-grid;
       place-items: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary-2), var(--accent));
-      color: #fff;
-      font-size: 0.82rem;
-      font-weight: 700;
-      flex: 0 0 auto;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      background: var(--orange-soft);
+      color: #a85f21;
+      font-family: "Manrope", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
     }
+    .skill-card h3 { min-height: 48px; margin-bottom: 10px; color: var(--navy); font-size: 1.04rem; }
+    .skill-card p { margin: 0; color: var(--muted); font-size: 0.88rem; }
 
-    .services-grid,
-    .social-grid,
     .brands-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.2rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
-
-    .service-card,
-    .social-card,
     .brand-card {
-      background: var(--surface);
-      padding: 1.5rem;
+      display: flex;
+      min-height: 380px;
+      flex-direction: column;
+      padding: 30px;
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background: #fff;
     }
-
-    .service-card:hover,
-    .social-card:hover,
-    .brand-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
-    }
-
-    .icon-box {
-      width: 52px;
-      height: 52px;
+    .brand-card.featured { background: var(--navy); color: #fff; }
+    .brand-card.featured p, .brand-card.featured li { color: #ced6e5; }
+    .brand-logo {
+      width: 64px;
+      height: 64px;
       display: grid;
       place-items: center;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #eff6ff, #fef3c7);
-      color: var(--primary-2);
+      margin-bottom: 22px;
+      border-radius: 16px;
+      background: var(--orange-soft);
+      color: #9e5b20;
+      font-family: "Manrope", sans-serif;
       font-weight: 800;
-      margin-bottom: 0.9rem;
     }
-
-    .service-card h3,
-    .social-card h3,
-    .brand-card h3 {
-      color: var(--primary);
-      margin-bottom: 0.45rem;
-    }
-
-    .service-card p,
-    .social-card p,
-    .brand-card p,
-    .contact-card p,
-    .contact-links a {
+    .brand-card.featured .brand-logo { background: var(--orange); color: #fff; }
+    .brand-card h3 { margin-bottom: 6px; color: var(--navy); }
+    .brand-card.featured h3 { color: #fff; }
+    .brand-kicker { color: var(--orange) !important; font-size: 0.82rem; font-weight: 800; }
+    .brand-card p { color: var(--muted); }
+    .focus-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px 12px;
+      margin: 12px 0 20px;
+      padding: 0;
+      list-style: none;
       color: var(--muted);
+      font-size: 0.86rem;
     }
+    .focus-list li::before { content: "—"; margin-right: 7px; color: var(--orange); }
+    .brand-mission { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); }
+    .brand-card.featured .brand-mission { border-color: rgba(255, 255, 255, 0.12); }
+    .brand-card .btn { align-self: flex-start; margin-top: 18px; }
 
-    .social-card a {
-      display: inline-block;
-      margin-top: 0.6rem;
-      font-weight: 600;
-      color: var(--primary-2);
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
     }
+    .service-card {
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+    .service-card h3 { margin: 14px 0 8px; color: var(--navy); font-size: 1.02rem; }
+    .service-card p { margin: 0; color: var(--muted); font-size: 0.88rem; }
+    .service-number {
+      color: var(--orange);
+      font-family: "Manrope", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+    .services-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 18px;
+      padding: 24px 28px;
+      border-radius: var(--radius);
+      background: var(--navy);
+      color: #fff;
+    }
+    .services-cta h3 { margin-bottom: 4px; }
+    .services-cta p { margin: 0; color: #ccd4e3; }
+
+    .platforms-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .platform-card {
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      transition: transform 180ms ease, border-color 180ms ease;
+    }
+    .platform-card:hover { transform: translateY(-3px); border-color: #ccd5e5; }
+    .platform-icon {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+    .platform-card h3 { margin: 0 0 2px; color: var(--navy); font-size: 0.98rem; }
+    .platform-card p { margin: 0 0 8px; color: var(--muted); font-size: 0.82rem; }
+    .platform-card a { margin-top: auto; color: var(--blue); font-size: 0.86rem; font-weight: 800; }
 
     .contact-wrap {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 1.5rem;
+      grid-template-columns: 1fr 0.7fr;
+      gap: 18px;
     }
-
-    .contact-card {
-      background: linear-gradient(135deg, var(--primary), #1e3a8a);
-      color: #fff;
-      padding: 2rem;
+    .contact-main, .contact-side {
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      padding: 34px;
     }
-
-    .contact-card h3 {
-      font-size: 2rem;
-      margin-bottom: 0.8rem;
+    .contact-main { background: var(--navy); color: #fff; }
+    .contact-main h2 { margin-bottom: 12px; color: #fff; font-size: clamp(2rem, 4vw, 3.2rem); }
+    .contact-main p { max-width: 560px; color: #cbd3e2; }
+    .contact-side { border: 1px solid var(--line); background: #fff; }
+    .contact-side h3 { color: var(--navy); }
+    .contact-details { display: grid; gap: 10px; margin: 22px 0; }
+    .contact-details a, .contact-details span {
+      color: #dce3ef;
+      font-weight: 700;
     }
+    .contact-side .contact-details a, .contact-side .contact-details span { color: var(--ink); }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .contact-actions .btn-primary { background: var(--orange); }
 
-    .contact-card p {
-      color: #dbeafe;
-      margin-bottom: 1rem;
-    }
-
-    .contact-links {
+    footer { padding: 42px 0 28px; border-top: 1px solid var(--line); background: #fff; }
+    .footer-grid {
       display: grid;
-      gap: 0.75rem;
-      margin-top: 1rem;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: start;
     }
-
-    .contact-links a {
-      display: flex;
-      align-items: center;
-      gap: 0.55rem;
-      color: #fff;
-      background: rgba(255, 255, 255, 0.06);
-      padding: 0.75rem 0.9rem;
-      border-radius: 12px;
-    }
-
-    .contact-side {
-      background: var(--surface);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 1.8rem;
-    }
-
-    .contact-side h3 {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-
-    footer {
-      padding: 1.5rem 0 3rem;
-      text-align: center;
+    .footer-name { color: var(--navy); font-family: "Manrope", sans-serif; font-weight: 800; }
+    .footer-copy { margin: 4px 0; color: var(--muted); font-size: 0.86rem; }
+    .footer-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 16px; }
+    .footer-nav a { color: var(--muted); font-size: 0.86rem; font-weight: 700; }
+    .footer-nav a:hover { color: var(--blue); }
+    .copyright {
+      grid-column: 1 / -1;
+      margin: 24px 0 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.82rem;
+      text-align: center;
     }
+
+    :focus-visible { outline: 3px solid rgba(53, 89, 168, 0.35); outline-offset: 3px; }
 
     @media (max-width: 980px) {
-      .hero-grid,
-      .about-grid,
-      .contact-wrap {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid,
-      .social-grid,
-      .brands-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      section {
-        padding: 72px 0;
-      }
-
-      .hero {
-        padding-top: 110px;
-      }
-
-      .hero-grid {
-        gap: 1.8rem;
-      }
-
-      .hero-text {
-        text-align: center;
-      }
-
-      .hero-text p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-actions,
-      .contact-actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-card {
-        padding: 1.5rem;
-      }
-
-      .avatar-wrap {
-        width: 140px;
-        height: 140px;
-      }
-
-      .services-grid,
-      .social-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    :root {
-      --bg: #f4f7fc;
-      --surface-2: #eef3fb;
-      --muted: #526078;
-      --primary-2: #3156d9;
-      --accent: #f0a536;
-      --accent-2: #ea713e;
-      --border: #e1e7f0;
-      --shadow: 0 22px 55px rgba(20, 35, 70, 0.09);
-      --radius: 22px;
-    }
-
-    html {
-      scroll-padding-top: 92px;
-    }
-
-    body {
-      background:
-        radial-gradient(ellipse at 85% 3%, rgba(49, 86, 217, 0.08), transparent 34rem),
-        var(--bg);
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid #f0a536;
-      outline-offset: 4px;
-    }
-
-    .skip-link {
-      position: fixed;
-      top: 0.75rem;
-      left: 0.75rem;
-      z-index: 1200;
-      padding: 0.7rem 1rem;
-      border-radius: 10px;
-      background: #fff;
-      color: var(--primary);
-      transform: translateY(-160%);
-    }
-
-    .skip-link:focus {
-      transform: translateY(0);
-    }
-
-    header {
-      top: 0;
-      right: 0;
-      bottom: auto;
-      width: 100%;
-      padding: 0.7rem 0;
-      transform: none;
-      background: rgba(12, 20, 42, 0.96);
-      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
-      backdrop-filter: blur(14px);
-    }
-
-    .nav-wrap {
-      width: min(1180px, 92%);
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-
-    .sidebar-profile {
-      width: auto;
-      padding: 0;
-      border: 0;
-    }
-
-    .sidebar-profile .avatar-wrap {
-      width: 48px;
-      height: 48px;
-      margin: 0;
-    }
-
-    .sidebar-profile h3 {
-      margin: 0;
-      font-size: 0.95rem;
-    }
-
-    .sidebar-profile p {
-      font-size: 0.72rem;
-    }
-
-    nav {
-      width: auto;
-      margin-left: auto;
-    }
-
-    nav ul {
-      flex-direction: row;
-      align-items: center;
-      gap: 0.2rem;
-    }
-
-    nav a {
-      padding: 0.65rem 0.8rem;
-      font-size: 0.88rem;
-    }
-
-    nav a:hover {
-      transform: none;
-    }
-
-    .sidebar-btn {
-      width: auto;
-      margin: 0;
-      padding: 0.72rem 1.05rem;
-    }
-
-    .menu-toggle,
-    .menu-overlay {
-      display: none;
-    }
-
-    .hero {
-      padding-top: 150px;
-      padding-bottom: 100px;
-    }
-
-    .typing-wrap {
-      margin-bottom: 2.2rem;
-    }
-
-    .typing-text {
-      min-height: 0;
-      padding: 0.55rem 1rem;
-      border: 1px solid rgba(240, 165, 54, 0.65);
-      border-radius: 999px;
-      background: linear-gradient(135deg, #14285c, #3156d9);
-      color: #fff;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      white-space: normal;
-      box-shadow: 0 10px 24px rgba(20, 40, 92, 0.22);
-    }
-
-    .typing-text::after {
-      content: none;
-    }
-
-    .hero-text h1 {
-      font-size: clamp(2.8rem, 6vw, 5.4rem);
-      letter-spacing: -0.065em;
-    }
-
-    .hero-text p {
-      font-size: 1.08rem;
-      line-height: 1.85;
-    }
-
-    .hero-card {
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 28px 65px rgba(15, 23, 42, 0.19);
-    }
-
-    section:not(.hero) {
-      scroll-margin-top: 82px;
-    }
-
-    .section-header {
-      margin-bottom: 2.5rem;
-    }
-
-    .section-header h2 {
-      letter-spacing: -0.045em;
-    }
-
-    .service-card,
-    .social-card,
-    .brand-card,
-    .about-card,
-    .contact-side {
-      box-shadow: 0 12px 34px rgba(20, 35, 70, 0.05);
-    }
-
-    .service-card,
-    .social-card {
-      padding: 1.7rem;
-    }
-
-    .social-grid {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .social-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 205px;
-    }
-
-    .social-card .icon-box {
-      width: 46px;
-      height: 46px;
-      margin-bottom: 1rem;
-      border-radius: 15px;
-    }
-
-    .social-card h3 {
-      font-size: 1.15rem;
-    }
-
-    .social-card p {
-      flex: 1;
-    }
-
-    .social-card a {
-      align-self: flex-start;
-      margin-top: 1.1rem;
-    }
-
-    .social-card a::after {
-      content: " ↗";
-    }
-
-    .contact-card {
-      background:
-        radial-gradient(circle at 100% 0, rgba(78, 112, 229, 0.5), transparent 55%),
-        linear-gradient(135deg, var(--primary), #14285c);
-    }
-
-    .btn {
-      min-height: 48px;
-    }
-
-    footer {
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 900px) {
-      .nav-wrap {
-        gap: 0.6rem;
-      }
-
-      nav a {
-        padding: 0.6rem 0.5rem;
-        font-size: 0.82rem;
-      }
-
-      .sidebar-btn {
-        padding: 0.65rem 0.8rem;
-        font-size: 0.85rem;
-      }
-    }
-
-    @media (max-width: 900px) {
-      html {
-        scroll-padding-top: 18px;
-      }
-
-      header {
-        top: 0;
-        right: auto;
-        bottom: 0;
-        width: min(340px, 88vw);
-        padding: 1.5rem 1rem;
-        transform: translateX(-105%);
-        transition: transform 0.3s ease;
-      }
-
-      header.open {
-        transform: translateX(0);
-      }
-
-      .nav-wrap {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: flex-start;
-        gap: 1.4rem;
-      }
-
-      .sidebar-profile {
-        width: 100%;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid rgba(148, 163, 184, 0.18);
-      }
-
-      .sidebar-profile .avatar-wrap {
-        width: 64px;
-        height: 64px;
-      }
-
-      nav {
-        width: 100%;
-        margin: 0;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.45rem;
-      }
-
-      nav a {
-        padding: 0.85rem 0.95rem;
-        font-size: 0.96rem;
-      }
-
-      .sidebar-btn {
-        width: 100%;
-        margin-top: auto;
-        padding: 0.9rem 1.25rem;
-      }
-
-      .menu-toggle {
-        top: 14px;
-        left: auto;
-        right: 14px;
-        display: flex;
-        width: 46px;
-        height: 46px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 14px;
-        background: var(--primary);
-        box-shadow: 0 8px 22px rgba(15, 23, 42, 0.2);
-      }
-
-      .menu-overlay {
+      .main-nav {
         position: fixed;
-        inset: 0;
-        z-index: 900;
-        display: block;
-        border: 0;
-        background: rgba(7, 12, 25, 0.48);
-      }
-
-      .menu-overlay[hidden] {
+        inset: 72px 0 auto 0;
         display: none;
+        max-height: calc(100vh - 72px);
+        overflow-y: auto;
+        border-bottom: 1px solid var(--line);
+        background: #fff;
+        box-shadow: 0 18px 40px rgba(16, 26, 47, 0.12);
       }
-
-      body.nav-open {
-        overflow: hidden;
+      .main-nav.open { display: block; }
+      .main-nav ul {
+        width: min(1120px, calc(100% - 40px));
+        margin-inline: auto;
+        padding: 18px 0;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 2px;
       }
-
-      .hero {
-        padding-top: 96px;
-      }
-
-      .typing-wrap {
-        padding-right: 3rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .hero-text h1 {
-        font-size: clamp(2.7rem, 12vw, 4.2rem);
-      }
-
-      .social-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      }
+      .main-nav a { display: block; padding: 10px 12px; border-radius: 8px; }
+      .main-nav a:hover { background: var(--canvas); }
+      .menu-toggle { display: block; }
+      .hero-grid { grid-template-columns: 1fr 290px; gap: 38px; }
+      .skills-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .platforms-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-layout { grid-template-columns: 1fr 1.5fr; gap: 34px; }
     }
 
-    @media (min-width: 901px) and (max-width: 1200px) {
-      .nav-wrap {
-        width: min(1120px, 94%);
-        gap: 0.8rem;
-      }
-
-      .sidebar-profile {
-        gap: 0.65rem;
-      }
-
-      .sidebar-profile .avatar-wrap {
-        width: 44px;
-        height: 44px;
-      }
-
-      nav a {
-        padding: 0.58rem 0.58rem;
-        font-size: 0.82rem;
-      }
-
-      .sidebar-btn {
-        padding: 0.62rem 0.82rem;
-        font-size: 0.82rem;
-      }
-
-      .container {
-        width: min(1080px, 94%);
-      }
-
-      .hero {
-        padding-top: 125px;
-        padding-bottom: 65px;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        max-width: 760px;
-        margin: 0 auto;
-      }
-
-      .hero-card {
-        width: min(520px, 100%);
-        margin: 0 auto;
-      }
-
-      .hero-text {
-        text-align: center;
-      }
-
-      .hero-text p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-actions {
-        justify-content: center;
-      }
-
-      .hero-text h1 {
-        font-size: clamp(2.8rem, 5vw, 4.2rem);
-      }
-
-      .hero-card {
-        padding: 1.5rem;
-      }
-
-      .hero-card .avatar-wrap {
-        width: 150px;
-        height: 150px;
-      }
-
-      section {
-        padding: 72px 0;
-      }
-
-      .section-header {
-        margin-bottom: 2rem;
-      }
-
-      .services-grid,
-      .brands-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 901px) and (max-width: 1400px) {
-      .nav-wrap {
-        gap: 0.55rem;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 1.1rem;
-        max-width: 720px;
-        margin: 0 auto;
-      }
-
-      .hero-card {
-        width: min(620px, 100%);
-        margin: 0 auto;
-        padding: 1.1rem 1.3rem;
-      }
-
-      .hero-card .avatar-wrap {
-        width: 112px;
-        height: 112px;
-        margin-bottom: 0.55rem;
-      }
-
-      .hero-card h3 {
-        font-size: 1.35rem;
-        margin-bottom: 0.35rem;
-      }
-
-      .hero-card p {
-        max-width: 48ch;
-        margin: 0 auto 0.7rem;
-        line-height: 1.55;
-      }
-
-      .hero-card .mini-grid {
-        max-width: 520px;
-        margin: 0 auto;
-        gap: 0.45rem;
-      }
-
-      .hero-card .mini-box {
-        padding: 0.35rem;
-      }
-
-      .hero-card .mini-box strong {
-        font-size: 1rem;
-      }
-
-      .typing-wrap {
-        margin-bottom: 1rem;
-      }
-
-      .hero-text {
-        text-align: center;
-      }
-
-      .hero-text h1 {
-        margin-bottom: 0.55rem;
-        font-size: clamp(2.7rem, 4.5vw, 3.7rem);
-      }
-
-      .hero-text p {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 1.1rem;
-        line-height: 1.65;
-      }
-
-      .hero-actions {
-        justify-content: center;
-      }
-
-      .sidebar-profile p {
-        display: none;
-      }
-
-      nav ul {
-        gap: 0.1rem;
-      }
-
-      nav a {
-        white-space: nowrap;
-      }
-
-      .sidebar-btn {
-        white-space: nowrap;
-      }
-    }
-
-    @media (min-width: 901px) and (max-height: 800px) {
-      .hero {
-        padding-top: 105px;
-        padding-bottom: 48px;
-      }
-
-      .typing-wrap {
-        margin-bottom: 1.2rem;
-      }
-
-      .hero-grid {
-        gap: 1.5rem;
-      }
-
-      .hero-card {
-        padding: 1.2rem 1.5rem;
-      }
-
-      .hero-card .avatar-wrap {
-        width: 128px;
-        height: 128px;
-      }
-
-      .hero-card h3 {
-        font-size: 1.35rem;
-        margin-bottom: 0.45rem;
-      }
-
-      .hero-card p {
-        margin-bottom: 0.8rem;
-      }
-
-      .mini-grid {
-        gap: 0.55rem;
-      }
-
-      .mini-box {
-        padding: 0.55rem;
-      }
-
-      section {
-        padding-top: 60px;
-        padding-bottom: 60px;
-      }
+    @media (max-width: 720px) {
+      .container { width: min(100% - 32px, 1120px); }
+      section { padding: 68px 0; }
+      .main-nav ul { width: calc(100% - 32px); }
+      .hero { min-height: auto; padding: 48px 0 64px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 38px; }
+      .hero h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
+      .portrait-card { width: min(330px, 86%); }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .about-layout { grid-template-columns: 1fr; gap: 24px; }
+      .about-layout .section-heading { position: static; }
+      .about-copy { padding: 24px; }
+      .education-wrap { grid-template-columns: 1fr; }
+      .education-year { min-height: 64px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .skills-grid, .brands-grid, .services-grid, .platforms-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .skill-card { min-height: 0; }
+      .skill-card h3 { min-height: 0; }
+      .brand-card { min-height: 0; }
+      .focus-list { grid-template-columns: 1fr; }
+      .services-cta { align-items: flex-start; flex-direction: column; }
+      .contact-main, .contact-side { padding: 24px; }
+      .contact-actions { flex-direction: column; }
+      .contact-actions .btn { width: 100%; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-nav { justify-content: flex-start; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
       }
-    }
-
-    section[id] { scroll-margin-top: 32px; }
-
-    .skill-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin-top: 0.25rem;
-    }
-
-    .skill-links a {
-      padding: 0.45rem 0.7rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: #fff;
-      color: var(--primary);
-      font-size: 0.78rem;
-      font-weight: 700;
-      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    }
-
-    .skill-links a:hover {
-      border-color: var(--primary-2);
-      color: var(--primary-2);
-      transform: translateY(-1px);
-    }
-
-    .education-card {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 2rem;
-      border: 1px solid var(--border);
-      border-left: 5px solid var(--accent);
-      border-radius: var(--radius);
-      background: var(--surface);
-      box-shadow: var(--shadow);
-    }
-
-    .education-card h3 { color: var(--primary); font-size: 1.35rem; margin-bottom: 0.45rem; }
-    .education-card p { color: var(--muted); }
-
-    .skills-grid,
-    .brands-grid,
-    .sdf-services-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-    }
-
-    .skill-card,
-    .brand-card,
-    .sdf-service-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .skill-card:hover,
-    .brand-card:hover,
-    .sdf-service-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
-    }
-
-    .skill-card h3,
-    .brand-card h3,
-    .sdf-service-card h3 {
-      color: var(--primary);
-      margin: 0.35rem 0 0.55rem;
-    }
-
-    .skill-card > p,
-    .brand-card > p,
-    .brand-card li,
-    .sdf-service-card p { color: var(--muted); }
-
-    .skill-list,
-    .focus-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.45rem 0.8rem;
-      margin-top: 1rem;
-    }
-
-    .skill-list li,
-    .focus-list li {
-      position: relative;
-      padding-left: 1rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .skill-list li::before,
-    .focus-list li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.65em;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-
-    .brand-logo {
-      width: 68px;
-      height: 68px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 1rem;
-      border-radius: 18px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-2));
-      color: #fff;
-      font-weight: 800;
-    }
-
-    .brand-card.sdf .brand-logo {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    }
-
-    .brand-kicker,
-    .brand-mission,
-    .brand-tagline { color: var(--primary-2) !important; font-weight: 700; }
-    .brand-card .btn,
-    .sdf-service-card .btn { margin-top: 1.1rem; }
-    .brand-card .focus-list { grid-template-columns: 1fr; }
-
-    .service-intro {
-      max-width: 720px;
-      margin: 0 auto 2.5rem;
-      text-align: center;
-      color: var(--muted);
-    }
-
-    .project-cta {
-      grid-column: 1 / -1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      padding: 1.5rem;
-      border-radius: var(--radius);
-      background: var(--primary);
-      color: #fff;
-    }
-
-    .project-cta h3 { color: #fff; margin-bottom: 0.25rem; }
-
-    .contact-details {
-      display: grid;
-      gap: 0.65rem;
-      margin-top: 1rem;
-    }
-
-    .contact-details a,
-    .contact-details span { color: #dbeafe; }
-    .nav-wrap nav { min-height: 0; overflow-y: auto; }
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.45rem 1rem;
-      margin: 1rem 0;
-    }
-
-    .footer-links a {
-      color: var(--primary);
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      .skills-grid,
-      .brands-grid,
-      .sdf-services-grid { grid-template-columns: 1fr; }
-      .skill-list { grid-template-columns: 1fr; }
-      .project-cta {
-        grid-column: auto;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-      .skill-links { justify-content: center; }
     }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <button class="menu-toggle" aria-label="Open navigation menu" aria-controls="site-navigation" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <button class="menu-overlay" aria-label="Close navigation menu" hidden></button>
-
-  <header id="site-navigation">
+  <header class="site-header">
     <div class="container nav-wrap">
-      <div class="sidebar-profile">
-        <div class="avatar-wrap">
-          <img src="ChatGPT Image Jun 5, 2026, 01_36_18 AM.png" alt="Portrait of Muhammad Suleman">
-        </div>
-        <div>
-          <h3>Muhammad Suleman</h3>
-          <p>Political Scientist • Researcher • Digital Marketer</p>
-        </div>
-      </div>
-      <nav aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Muhammad Suleman home">
+        <span class="brand-mark">MS</span>
+        <span>Muhammad Suleman</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="main-navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Me</a></li>
@@ -1546,197 +601,97 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <a href="#contact" class="btn btn-primary sidebar-btn">Let’s Work Together</a>
     </div>
   </header>
 
-
   <main id="main">
     <section class="hero" id="home">
-      <div class="container">
-        <div class="typing-wrap">
-          <p id="typingText" class="typing-text">WELCOME TO MY PERSONAL PORTFOLIO</p>
-        </div>
-        <div class="hero-grid">
-          <div class="hero-card">
-            <div class="avatar-wrap">
-              <img src="ChatGPT Image Jun 5, 2026, 01_36_18 AM.png" alt="Portrait of Muhammad Suleman">
-            </div>
-            <h3>Muhammad Suleman</h3>
-            <p>Political Science Student | Content Creator | Digital Marketing Specialist</p>
-          </div>
-
-          <div class="hero-text">
-            <h1>Muhammad Suleman</h1>
-            <h2>Political Science Student | Content Creator | Digital Marketing Specialist</h2>
-            <p>I am a Political Science student, content creator, and digital marketing professional with a strong foundation in research, communication, and digital technologies. I specialize in digital marketing, SEO, website development, and e-commerce, combining strategic thinking, creativity, and technical skills to build effective digital solutions and meaningful online experiences.</p>
-            <p>My work brings together knowledge, content, and technology to create value, solve problems, and support digital growth.</p>
-            <div class="hero-actions">
-              <a href="#skills" class="btn btn-primary">Explore My Skills</a>
-              <a href="#brands" class="btn btn-secondary">Explore My Brands</a>
-              <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
-            <nav class="skill-links" aria-label="Jump to skill details">
-              <a href="#skill-political-science">Political Science</a>
-              <a href="#skill-content">Content</a>
-              <a href="#skill-marketing">Marketing</a>
-              <a href="#skill-seo">SEO</a>
-              <a href="#skill-local-seo">Local SEO</a>
-              <a href="#skill-web">Web</a>
-              <a href="#skill-ecommerce">E-commerce</a>
-              <a href="#skill-branding">Branding</a>
-            </nav>
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-kicker">Personal portfolio</span>
+          <h1>Muhammad Suleman</h1>
+          <p class="hero-role">Political Science Student | Content Creator | Digital Marketing Specialist</p>
+          <p class="hero-summary">I combine research, communication, and digital technologies to create meaningful content and practical solutions in marketing, SEO, website development, and e-commerce.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#skills">Explore my skills</a>
+            <a class="btn btn-secondary" href="#brands">Explore my brands</a>
+            <a class="btn btn-secondary" href="#contact">Contact me</a>
           </div>
         </div>
+        <figure class="portrait-card">
+          <img src="ChatGPT Image Jun 5, 2026, 01_36_18 AM.png" alt="Portrait of Muhammad Suleman">
+          <figcaption class="portrait-label">
+            <strong>Muhammad Suleman</strong>
+            <span>Pakistan</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
     <section id="about">
-      <div class="container about-grid">
-        <article class="about-card">
-          <header class="section-header about-heading">
-            <h2>About Me</h2>
-          </header>
-          <h3>A Journey of Knowledge, Creativity &amp; Digital Growth</h3>
+      <div class="container about-layout">
+        <header class="section-heading">
+          <span class="eyebrow">About me</span>
+          <h2>A Journey of Knowledge, Creativity &amp; Digital Growth</h2>
+        </header>
+        <article class="about-copy">
           <p>I am Muhammad Suleman, a Political Science student, content creator, and digital marketing professional with a passion for research, communication, technology, and continuous learning.</p>
           <p>My academic journey in Political Science has developed my interest in political systems, governance, international relations, public affairs, and social issues. I enjoy exploring complex subjects, understanding different perspectives, and presenting information in a clear and meaningful way.</p>
           <p>Beyond academics, I work in digital content creation and have developed expertise in digital marketing, search engine optimization (SEO), website development, and e-commerce. I am interested in combining creativity, research, and technology to build useful digital experiences and support online growth.</p>
           <p>I have established two brands with different purposes: M Suleman Official, focused on educational and informative content, and Suleman Digital Frontier, focused on digital services and solutions.</p>
           <p>My long-term goal is to grow as a knowledgeable professional, create meaningful digital projects, and build opportunities through research, communication, creativity, and technology.</p>
-          <blockquote class="quote">My Philosophy: Learn continuously. Think critically. Create meaningfully. Build for the future.</blockquote>
+          <blockquote class="philosophy">My Philosophy: Learn continuously. Think critically. Create meaningfully. Build for the future.</blockquote>
         </article>
       </div>
     </section>
 
     <section id="education">
       <div class="container">
-        <header class="section-header">
-          <h2>Education</h2>
+        <header class="section-heading center">
+          <span class="eyebrow">Education</span>
+          <h2>Academic Foundation</h2>
         </header>
-        <article class="education-card">
-          <h3>Political Science</h3>
-          <p>My academic journey as a Political Science student has developed my interest in political systems, governance, international relations, public affairs, and social issues. It continues to support my research, critical analysis, and approach to informative communication.</p>
+        <article class="education-wrap">
+          <div class="education-year">Political Science</div>
+          <div class="education-content">
+            <h3>Political Science Studies</h3>
+            <p>My academic journey has developed my interest in political systems, governance, international relations, public affairs, and social issues. It supports my research, critical analysis, and approach to informative communication.</p>
+          </div>
         </article>
       </div>
     </section>
 
     <section id="skills">
       <div class="container">
-        <header class="section-header">
-          <h2>Skills &amp; Expertise</h2>
-          <p>Knowledge, Strategy &amp; Digital Capabilities — I bring together research, content creation, and digital expertise to develop informative content, strengthen online presence, and build practical digital solutions.</p>
+        <header class="section-heading">
+          <span class="eyebrow">Skills &amp; expertise</span>
+          <h2>Knowledge, strategy &amp; digital capabilities</h2>
+          <p>I combine research, content creation, and digital expertise to develop informative content, strengthen online presence, and build practical digital solutions.</p>
         </header>
         <div class="skills-grid">
           <article class="skill-card" id="skill-political-science">
-            <div class="icon-box" aria-hidden="true">PS</div>
-            <h3>Political Science &amp; Research</h3>
-            <p>Research and analysis across political systems, public affairs, and international subjects.</p>
-            <ul class="skill-list">
-              <li id="skill-political-science-list">Political Science</li>
-              <li id="skill-political-research">Political Research</li>
-              <li id="skill-current-affairs">Current Affairs Analysis</li>
-              <li id="skill-international-relations">International Relations</li>
-              <li id="skill-critical-analysis">Critical Analysis</li>
-              <li id="skill-information-research">Information Research</li>
-            </ul>
+            <div class="skill-icon">PS</div><h3>Political Science &amp; Research</h3><p>Political science, political research, current affairs analysis, international relations, critical analysis, and information research.</p>
           </article>
-
           <article class="skill-card" id="skill-content">
-            <div class="icon-box" aria-hidden="true">CC</div>
-            <h3>Content Creation</h3>
-            <p>Planning and producing clear, educational, and engaging digital content.</p>
-            <ul class="skill-list">
-              <li id="skill-content-planning">Content Planning</li>
-              <li id="skill-content-strategy">Content Strategy</li>
-              <li id="skill-scriptwriting">Scriptwriting</li>
-              <li id="skill-educational-content">Educational Content</li>
-              <li id="skill-social-content">Social Media Content</li>
-              <li id="skill-storytelling">Storytelling</li>
-            </ul>
+            <div class="skill-icon">CC</div><h3>Content Creation</h3><p>Content planning, content strategy, scriptwriting, educational content, social media content, and storytelling.</p>
           </article>
-
           <article class="skill-card" id="skill-marketing">
-            <div class="icon-box" aria-hidden="true">DM</div>
-            <h3>Digital Marketing</h3>
-            <p>Strategic communication and content approaches that support digital growth.</p>
-            <ul class="skill-list">
-              <li id="skill-digital-marketing">Digital Marketing Strategy</li>
-              <li id="skill-brand-development">Brand Development</li>
-              <li id="skill-content-marketing">Content Marketing</li>
-              <li id="skill-social-marketing">Social Media Marketing</li>
-              <li id="skill-audience-research">Audience Research</li>
-              <li id="skill-marketing-strategy">Marketing Strategy</li>
-            </ul>
+            <div class="skill-icon">DM</div><h3>Digital Marketing</h3><p>Digital marketing strategy, brand development, content marketing, social media marketing, audience research, and marketing strategy.</p>
           </article>
-
           <article class="skill-card" id="skill-seo">
-            <div class="icon-box" aria-hidden="true">SEO</div>
-            <h3>Search Engine Optimization (SEO)</h3>
-            <p>Research-based optimization for stronger search relevance and website organization.</p>
-            <ul class="skill-list">
-              <li id="skill-keyword-research">Keyword Research</li>
-              <li id="skill-on-page-seo">On-Page SEO</li>
-              <li id="skill-technical-seo">Technical SEO</li>
-              <li id="skill-off-page-seo">Off-Page SEO</li>
-              <li id="skill-competitor-analysis">Competitor Analysis</li>
-              <li id="skill-content-optimization">Content Optimization</li>
-              <li id="skill-seo-audits">SEO Audits</li>
-            </ul>
+            <div class="skill-icon">SEO</div><h3>SEO</h3><p>Keyword research, on-page SEO, technical SEO, off-page SEO, competitor analysis, content optimization, and SEO audits.</p>
           </article>
-
           <article class="skill-card" id="skill-local-seo">
-            <div class="icon-box" aria-hidden="true">LSEO</div>
-            <h3>Local SEO</h3>
-            <p>Local search strategies based on geographic relevance and market research.</p>
-            <ul class="skill-list">
-              <li id="skill-local-keywords">Local Keyword Research</li>
-              <li id="skill-google-business">Google Business Profile Optimization</li>
-              <li id="skill-local-competitors">Local Competitor Research</li>
-              <li id="skill-local-visibility">Local Search Visibility</li>
-              <li id="skill-local-strategy">Local SEO Strategy</li>
-            </ul>
+            <div class="skill-icon">LSEO</div><h3>Local SEO</h3><p>Local keyword research, Google Business Profile optimization, local competitor research, search visibility, and local strategy.</p>
           </article>
-
           <article class="skill-card" id="skill-web">
-            <div class="icon-box" aria-hidden="true">WEB</div>
-            <h3>Website Development</h3>
-            <p>Structured, responsive websites designed for clear access and useful digital experiences.</p>
-            <ul class="skill-list">
-              <li id="skill-wordpress">WordPress</li>
-              <li id="skill-web-structure">Website Structure and Design</li>
-              <li id="skill-html">HTML</li>
-              <li id="skill-css">CSS</li>
-              <li id="skill-responsive-design">Responsive Website Design</li>
-              <li id="skill-web-optimization">Website Optimization</li>
-            </ul>
+            <div class="skill-icon">WEB</div><h3>Website Development</h3><p>WordPress, website structure and design, HTML, CSS, responsive website design, and website optimization.</p>
           </article>
-
           <article class="skill-card" id="skill-ecommerce">
-            <div class="icon-box" aria-hidden="true">EC</div>
-            <h3>E-commerce</h3>
-            <p>Store organization and product presentation for clear and practical online shopping.</p>
-            <ul class="skill-list">
-              <li id="skill-shopify">Shopify</li>
-              <li id="skill-store-development">E-commerce Store Development</li>
-              <li id="skill-product-research">Product Research</li>
-              <li id="skill-product-pages">Product Page Optimization</li>
-              <li id="skill-store-structure">Store Structure</li>
-              <li id="skill-ecommerce-seo">E-commerce SEO</li>
-            </ul>
+            <div class="skill-icon">EC</div><h3>E-commerce</h3><p>Shopify, e-commerce store development, product research, product page optimization, store structure, and e-commerce SEO.</p>
           </article>
-
           <article class="skill-card" id="skill-branding">
-            <div class="icon-box" aria-hidden="true">BC</div>
-            <h3>Branding &amp; Creative Content</h3>
-            <p>Consistent visual and written communication that supports brand identity.</p>
-            <ul class="skill-list">
-              <li id="skill-brand-identity">Brand Identity</li>
-              <li id="skill-content-writing">Content Writing</li>
-              <li id="skill-copywriting">Copywriting</li>
-              <li id="skill-video-editing">Video Editing</li>
-              <li id="skill-social-branding">Social Media Branding</li>
-              <li id="skill-visual-planning">Visual Content Planning</li>
-            </ul>
+            <div class="skill-icon">BC</div><h3>Branding &amp; Creative Content</h3><p>Brand identity, content writing, copywriting, video editing, social media branding, and visual content planning.</p>
           </article>
         </div>
       </div>
@@ -1744,44 +699,42 @@
 
     <section id="brands">
       <div class="container">
-        <header class="section-header">
-          <h2>My Brands</h2>
-          <p>Building Ideas into Digital Platforms — knowledge, creativity, and technology used to build platforms that provide value and create meaningful opportunities.</p>
+        <header class="section-heading center">
+          <span class="eyebrow">My brands</span>
+          <h2>Ideas built into digital platforms</h2>
         </header>
         <div class="brands-grid">
           <article class="brand-card">
-            <div class="brand-logo" aria-label="M Suleman Official brand logo">MSO</div>
+            <div class="brand-logo">MSO</div>
             <h3>M Suleman Official</h3>
             <p class="brand-kicker">Educational Content | Knowledge | Awareness</p>
-            <p>M Suleman Official is my Urdu content brand, dedicated to creating educational, informative, and awareness-based content.</p>
+            <p>M Suleman Official is my Urdu content brand, dedicated to educational, informative, and awareness-based content.</p>
             <ul class="focus-list">
-              <li>Political Science and Current Affairs</li>
-              <li>Social Issues</li>
+              <li>Political Science &amp; current affairs</li>
+              <li>Social issues</li>
               <li>History</li>
-              <li>Science and Technology</li>
-              <li>Space and the Universe</li>
-              <li>Educational Videos and Podcasts</li>
+              <li>Science &amp; technology</li>
+              <li>Space &amp; the universe</li>
+              <li>Educational videos &amp; podcasts</li>
             </ul>
-            <p class="brand-mission">Mission: To make useful knowledge accessible through informative, engaging, and thought-provoking content.</p>
+            <p class="brand-mission"><strong>Mission:</strong> To make useful knowledge accessible through informative, engaging, and thought-provoking content.</p>
             <a class="btn btn-secondary" href="https://www.youtube.com/@MuhammadSuleman-07" target="_blank" rel="noopener noreferrer">Explore M Suleman Official</a>
           </article>
-
-          <article class="brand-card sdf">
-            <div class="brand-logo" aria-label="Suleman Digital Frontier brand logo">SDF</div>
-            <h3>Suleman Digital Frontier (SDF)</h3>
+          <article class="brand-card featured">
+            <div class="brand-logo">SDF</div>
+            <h3>Suleman Digital Frontier</h3>
             <p class="brand-kicker">Digital Marketing | SEO | Website Development</p>
-            <p>Suleman Digital Frontier is my digital services brand, focused on helping individuals, entrepreneurs, and businesses strengthen their digital presence.</p>
+            <p>Suleman Digital Frontier helps individuals, entrepreneurs, and businesses strengthen their digital presence.</p>
             <ul class="focus-list">
-              <li>Digital Marketing</li>
-              <li>SEO and Local SEO</li>
-              <li>Niche and Competitor Research</li>
-              <li>Website Development</li>
-              <li>E-commerce Solutions</li>
-              <li>Content Strategy and Branding</li>
+              <li>Digital marketing</li>
+              <li>SEO &amp; local SEO</li>
+              <li>Niche &amp; competitor research</li>
+              <li>Website development</li>
+              <li>E-commerce solutions</li>
+              <li>Content strategy &amp; branding</li>
             </ul>
-            <p class="brand-tagline">Tagline: Building the Digital Future.</p>
-            <p class="brand-mission">Mission: To deliver practical digital solutions that help businesses establish, improve, and grow their online presence.</p>
-            <a class="btn btn-primary" href="#services">Explore SDF Services</a>
+            <p class="brand-mission"><strong>Building the Digital Future.</strong><br>Mission: practical digital solutions that help businesses establish, improve, and grow their online presence.</p>
+            <a class="btn btn-orange" href="#services">Explore SDF services</a>
           </article>
         </div>
       </div>
@@ -1789,84 +742,51 @@
 
     <section id="services">
       <div class="container">
-        <header class="section-header">
-          <h2>Digital Services</h2>
-          <p>Services by Suleman Digital Frontier — practical digital solutions designed to help businesses build their online presence, understand their markets, and improve their digital performance.</p>
+        <header class="section-heading">
+          <span class="eyebrow">Digital services</span>
+          <h2>Services by Suleman Digital Frontier</h2>
+          <p>Practical digital solutions designed to help businesses build their online presence, understand their markets, and improve digital performance.</p>
         </header>
-        <div class="sdf-services-grid">
-          <article class="sdf-service-card" id="service-niche-research">
-            <div class="icon-box" aria-hidden="true">NR</div>
-            <h3>Niche Research</h3>
-            <p>Research and evaluation of potential niches using market demand, competition, audience interests, and business opportunities.</p>
-          </article>
-          <article class="sdf-service-card" id="service-competitor-analysis">
-            <div class="icon-box" aria-hidden="true">CA</div>
-            <h3>Competitor Analysis</h3>
-            <p>Analysis of competitors' websites, content strategies, keywords, strengths, weaknesses, and online positioning.</p>
-          </article>
-          <article class="sdf-service-card" id="service-seo">
-            <div class="icon-box" aria-hidden="true">SEO</div>
-            <h3>SEO Services</h3>
-            <p>Search engine optimization focused on keyword research, on-page improvements, technical considerations, content optimization, and organic search visibility.</p>
-          </article>
-          <article class="sdf-service-card" id="service-local-seo">
-            <div class="icon-box" aria-hidden="true">LSEO</div>
-            <h3>Local SEO</h3>
-            <p>Local search optimization to help businesses improve their visibility in relevant geographic searches and strengthen their local online presence.</p>
-          </article>
-          <article class="sdf-service-card" id="service-web-development">
-            <div class="icon-box" aria-hidden="true">WEB</div>
-            <h3>Website Development</h3>
-            <p>Creation of structured, responsive, and user-friendly websites designed around business goals and audience needs.</p>
-          </article>
-          <article class="sdf-service-card" id="service-ecommerce">
-            <div class="icon-box" aria-hidden="true">EC</div>
-            <h3>E-commerce Solutions</h3>
-            <p>Support with e-commerce website development, Shopify store setup, product presentation, and store optimization.</p>
-          </article>
-          <article class="sdf-service-card" id="service-content">
-            <div class="icon-box" aria-hidden="true">CW</div>
-            <h3>Content Strategy &amp; Writing</h3>
-            <p>Content planning, research, website content, SEO-focused writing, and marketing copy designed for specific audiences.</p>
-          </article>
-          <article class="sdf-service-card" id="service-branding">
-            <div class="icon-box" aria-hidden="true">BD</div>
-            <h3>Branding &amp; Digital Strategy</h3>
-            <p>Support with brand positioning, digital identity, content direction, and online growth planning.</p>
-          </article>
-          <div class="project-cta">
-            <div>
-              <h3>Let's Build Your Digital Presence.</h3>
-              <p>Have a project in mind? Let's discuss how the right digital strategy can support your goals.</p>
-            </div>
-            <a class="btn btn-primary" href="#contact">Discuss a Project</a>
-          </div>
+        <div class="services-grid">
+          <article class="service-card" id="service-niche-research"><span class="service-number">01</span><h3>Niche Research</h3><p>Evaluation of potential niches using market demand, competition, audience interests, and business opportunities.</p></article>
+          <article class="service-card" id="service-competitor-analysis"><span class="service-number">02</span><h3>Competitor Analysis</h3><p>Analysis of websites, content strategies, keywords, strengths, weaknesses, and online positioning.</p></article>
+          <article class="service-card" id="service-seo"><span class="service-number">03</span><h3>SEO Services</h3><p>Keyword research, on-page improvements, technical considerations, content optimization, and search visibility.</p></article>
+          <article class="service-card" id="service-local-seo"><span class="service-number">04</span><h3>Local SEO</h3><p>Local search optimization for relevant geographic searches and stronger local online presence.</p></article>
+          <article class="service-card" id="service-web-development"><span class="service-number">05</span><h3>Website Development</h3><p>Structured, responsive, and user-friendly websites designed around business goals and audience needs.</p></article>
+          <article class="service-card" id="service-ecommerce"><span class="service-number">06</span><h3>E-commerce Solutions</h3><p>E-commerce development, Shopify setup, product presentation, and store optimization.</p></article>
+          <article class="service-card" id="service-content"><span class="service-number">07</span><h3>Content Strategy &amp; Writing</h3><p>Content planning, research, website content, SEO-focused writing, and marketing copy for specific audiences.</p></article>
+          <article class="service-card" id="service-branding"><span class="service-number">08</span><h3>Branding &amp; Digital Strategy</h3><p>Brand positioning, digital identity, content direction, and online growth planning.</p></article>
+        </div>
+        <div class="services-cta">
+          <div><h3>Let's Build Your Digital Presence.</h3><p>Have a project in mind? Let's discuss how the right digital strategy can support your goals.</p></div>
+          <a class="btn btn-primary" href="#contact" style="background:#d98532">Discuss a Project</a>
         </div>
       </div>
     </section>
 
     <section id="social">
       <div class="container">
-        <header class="section-header">
-          <h2>My Platforms</h2>
-          <p>Connect with me across major platforms for content, updates, and professional collaboration.</p>
+        <header class="section-heading center">
+          <span class="eyebrow">My platforms</span>
+          <h2>Find and follow</h2>
         </header>
-        <div class="social-grid">
-          <article class="social-card"><div class="icon-box" aria-hidden="true">YT</div><h3>YouTube</h3><p>M Suleman Official</p><a href="https://www.youtube.com/@MuhammadSuleman-07" target="_blank" rel="noopener noreferrer">Visit Channel</a></article>
-          <article class="social-card"><div class="icon-box" aria-hidden="true">TT</div><h3>TikTok</h3><p>@m.suleman_official</p><a href="https://www.tiktok.com/@m.suleman_official?_r=1&amp;_t=ZS-9A55E45tjl6" target="_blank" rel="noopener noreferrer">Follow Now</a></article>
-          <article class="social-card"><div class="icon-box" aria-hidden="true">f</div><h3>Facebook Profile</h3><p>Personal profile</p><a href="https://www.facebook.com/share/19hrTnwHkv/" target="_blank" rel="noopener noreferrer">View Profile</a></article>
-          <article class="social-card"><div class="icon-box" aria-hidden="true">f</div><h3>Facebook</h3><p>M Suleman Official page</p><a href="https://www.facebook.com/share/1DbyynYGL2/" target="_blank" rel="noopener noreferrer">Open Page</a></article>
-          <article class="social-card"><div class="icon-box" aria-hidden="true">IG</div><h3>Instagram</h3><p>@m.suleman_official</p><a href="https://www.instagram.com/m.suleman_official?stkn=MXZ5eG92YnV6bjBvMQ==" target="_blank" rel="noopener noreferrer">View Instagram</a></article>
-          <article class="social-card"><div class="icon-box" aria-hidden="true">in</div><h3>LinkedIn</h3><p>Professional profile</p><a href="https://www.linkedin.com/in/muhammad-suleman-7b7760407/" target="_blank" rel="noopener noreferrer">Connect</a></article>
-          <article class="social-card"><div class="icon-box" aria-hidden="true">FW</div><h3>Freelance</h3><p>Fiverr / Upwork</p><a href="https://www.fiverr.com/msuleman_01" target="_blank" rel="noopener noreferrer">Hire Me</a></article>
+        <div class="platforms-grid">
+          <article class="platform-card"><div class="platform-icon">YT</div><h3>YouTube</h3><p>M Suleman Official</p><a href="https://www.youtube.com/@MuhammadSuleman-07" target="_blank" rel="noopener noreferrer">Visit Channel →</a></article>
+          <article class="platform-card"><div class="platform-icon">TT</div><h3>TikTok</h3><p>@m.suleman_official</p><a href="https://www.tiktok.com/@m.suleman_official?_r=1&amp;_t=ZS-9A55E45tjl6" target="_blank" rel="noopener noreferrer">Follow Now →</a></article>
+          <article class="platform-card"><div class="platform-icon">FB</div><h3>Facebook Profile</h3><p>Personal profile</p><a href="https://www.facebook.com/share/19hrTnwHkv/" target="_blank" rel="noopener noreferrer">View Profile →</a></article>
+          <article class="platform-card"><div class="platform-icon">FB</div><h3>Facebook Page</h3><p>M Suleman Official</p><a href="https://www.facebook.com/share/1DbyynYGL2/" target="_blank" rel="noopener noreferrer">Open Page →</a></article>
+          <article class="platform-card"><div class="platform-icon">IG</div><h3>Instagram</h3><p>@m.suleman_official</p><a href="https://www.instagram.com/m.suleman_official?stkn=MXZ5eG92YnV6bjBvMQ==" target="_blank" rel="noopener noreferrer">View Instagram →</a></article>
+          <article class="platform-card"><div class="platform-icon">IN</div><h3>LinkedIn</h3><p>Professional profile</p><a href="https://www.linkedin.com/in/muhammad-suleman-7b7760407/" target="_blank" rel="noopener noreferrer">Connect →</a></article>
+          <article class="platform-card"><div class="platform-icon">FW</div><h3>Fiverr</h3><p>Freelance profile</p><a href="https://www.fiverr.com/msuleman_01" target="_blank" rel="noopener noreferrer">Hire Me →</a></article>
         </div>
       </div>
     </section>
 
     <section id="contact">
       <div class="container contact-wrap">
-        <article class="contact-card">
-          <h3>Let's connect</h3>
+        <article class="contact-main">
+          <span class="eyebrow" style="color:#e69a52">Contact</span>
+          <h2>Let's start a conversation.</h2>
           <p>For collaborations, digital projects, content creation, SEO support, or business inquiries, feel free to reach out.</p>
           <div class="contact-details">
             <a href="https://wa.me/923404714747" target="_blank" rel="noopener noreferrer">WhatsApp: +92 340 4714747</a>
@@ -1875,11 +795,11 @@
           </div>
         </article>
         <aside class="contact-side">
-          <h3>Start a conversation</h3>
-          <p>Have a project idea or want to work together? I’m ready to connect.</p>
+          <h3>Choose a channel</h3>
+          <p>Have a project idea or want to work together?</p>
           <div class="contact-actions">
-            <a href="https://wa.me/923404714747" class="btn contact-btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=msulemanofficial07@gmail.com" class="btn contact-btn-email" target="_blank" rel="noopener noreferrer">Email Me</a>
+            <a class="btn btn-primary" href="https://wa.me/923404714747" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="btn btn-secondary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=msulemanofficial07@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a>
           </div>
         </aside>
       </div>
@@ -1887,86 +807,53 @@
   </main>
 
   <footer>
-    <div class="container">
-      <p><strong>Muhammad Suleman</strong></p>
-      <p>Political Science Student | Content Creator | Digital Marketing Specialist</p>
-      <p>Research. Create. Innovate. Grow.</p>
-      <nav class="footer-links" aria-label="Footer navigation">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-name">Muhammad Suleman</p>
+        <p class="footer-copy">Political Science Student | Content Creator | Digital Marketing Specialist</p>
+        <p class="footer-copy">Research. Create. Innovate. Grow.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#home">Home</a>
         <a href="#about">About Me</a>
         <a href="#education">Education</a>
-        <a href="#skills">Skills &amp; Expertise</a>
+        <a href="#skills">Skills</a>
         <a href="#brands">My Brands</a>
         <a href="#services">Services</a>
         <a href="#social">Platforms</a>
         <a href="#contact">Contact</a>
       </nav>
-      <nav class="footer-links" aria-label="Explore brands">
-        <a href="#brands">M Suleman Official</a>
-        <a href="#brands">Suleman Digital Frontier</a>
-      </nav>
-      <p>© 2026 Muhammad Suleman. All Rights Reserved.</p>
+      <p class="copyright">© 2026 Muhammad Suleman. All Rights Reserved.</p>
     </div>
   </footer>
 
   <script>
-    const typingText = document.querySelector('#typingText');
-    const welcomeMessage = 'WELCOME TO MY PERSONAL PORTFOLIO';
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      typingText.textContent = welcomeMessage;
-      typingText.classList.add('done');
-    } else {
-      typingText.textContent = '';
-      let characterIndex = 0;
-
-      function typeWelcomeMessage() {
-        characterIndex += 1;
-        typingText.textContent = welcomeMessage.slice(0, characterIndex);
-
-        if (characterIndex < welcomeMessage.length) {
-          window.setTimeout(typeWelcomeMessage, 70);
-        } else {
-          typingText.classList.add('done');
-        }
-      }
-
-      window.setTimeout(typeWelcomeMessage, 250);
-    }
-
     const menuToggle = document.querySelector('.menu-toggle');
-    const header = document.querySelector('header');
-    const menuOverlay = document.querySelector('.menu-overlay');
-    const navLinks = document.querySelectorAll('nav a');
+    const mainNav = document.querySelector('.main-nav');
+    const navLinks = document.querySelectorAll('.main-nav a');
 
     function setMenuOpen(isOpen) {
-      header.classList.toggle('open', isOpen);
-      document.body.classList.toggle('nav-open', isOpen);
+      mainNav.classList.toggle('open', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
       menuToggle.setAttribute('aria-expanded', String(isOpen));
       menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-      menuOverlay.hidden = !isOpen;
-      header.inert = window.matchMedia('(max-width: 900px)').matches && !isOpen;
     }
-
-    setMenuOpen(false);
 
     menuToggle.addEventListener('click', () => {
       setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
     });
 
-    menuOverlay.addEventListener('click', () => setMenuOpen(false));
-
-    navLinks.forEach(link => {
+    navLinks.forEach((link) => {
       link.addEventListener('click', () => setMenuOpen(false));
     });
 
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') {
-        setMenuOpen(false);
-      }
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setMenuOpen(false);
     });
 
-    window.addEventListener('resize', () => setMenuOpen(false));
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 980) setMenuOpen(false);
+    });
   </script>
 </body>
 </html>
