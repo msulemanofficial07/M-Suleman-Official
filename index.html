@@ -268,6 +268,14 @@
       font-size: 0.72rem;
       font-weight: 800;
     }
+    .portrait-role {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center;
+    }
     .portrait-stats {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -539,11 +547,6 @@
       gap: 30px;
       align-items: start;
     }
-    .footer-name { color: var(--navy); font-family: "Manrope", sans-serif; font-weight: 800; }
-    .footer-copy { margin: 4px 0; color: var(--muted); font-size: 0.86rem; }
-    .footer-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 16px; }
-    .footer-nav a { color: var(--muted); font-size: 0.86rem; font-weight: 700; }
-    .footer-nav a:hover { color: var(--blue); }
     .copyright {
       grid-column: 1 / -1;
       margin: 24px 0 0;
@@ -607,8 +610,6 @@
       .contact-main, .contact-side { padding: 24px; }
       .contact-actions { flex-direction: column; }
       .contact-actions .btn { width: 100%; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-nav { justify-content: flex-start; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -655,6 +656,7 @@
             <strong>Muhammad Suleman</strong>
             <span>Pakistan</span>
           </figcaption>
+          <p class="portrait-role">Political Science Student • Researcher • Content Creator • Digital Marketing Specialist</p>
           <div class="portrait-stats" aria-label="Professional overview">
             <div class="portrait-stat"><strong>10+</strong><span>Skills</span></div>
             <div class="portrait-stat"><strong>4+</strong><span>Platforms</span></div>
@@ -824,20 +826,6 @@
 
   <footer>
     <div class="container footer-grid">
-      <div>
-        <p class="footer-name">Muhammad Suleman</p>
-        <p class="footer-copy">Political Science Student | Content Creator | Digital Marketing Specialist</p>
-        <p class="footer-copy">Research. Create. Innovate. Grow.</p>
-      </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#brands">My Brands</a>
-        <a href="#services">Services</a>
-        <a href="#social">Platforms</a>
-        <a href="#contact">Contact</a>
-      </nav>
       <p class="copyright">© 2026 Muhammad Suleman. All Rights Reserved.</p>
     </div>
   </footer>
