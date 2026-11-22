@@ -143,15 +143,15 @@
     .menu-overlay { display: none; }
 
     .hero {
+      width: 100%;
       min-height: 520px;
       display: flex;
       align-items: center;
       padding: 64px 0;
       background:
-        linear-gradient(90deg, rgba(16, 26, 47, 0.035) 1px, transparent 1px),
-        linear-gradient(rgba(16, 26, 47, 0.035) 1px, transparent 1px),
-        var(--paper);
-      background-size: 32px 32px;
+        radial-gradient(circle at 18% 18%, rgba(123, 157, 222, 0.16), transparent 28rem),
+        radial-gradient(circle at 82% 82%, rgba(217, 133, 50, 0.10), transparent 22rem),
+        linear-gradient(135deg, #17284a 0%, #101a2f 100%);
     }
     .hero-grid {
       display: grid;
@@ -611,10 +611,23 @@
       .container { width: min(100% - 32px, 1120px); }
       section { padding: 68px 0; }
       .main-nav ul { width: calc(100% - 32px); }
-      .hero { min-height: auto; padding: 32px 0 40px; }
+      .hero {
+        min-height: 0;
+        padding: 24px 0 48px;
+        background: #f5f7fa;
+      }
       .hero-grid { grid-template-columns: 1fr; gap: 38px; }
+      .hero .container { width: 100%; padding: 0; }
       .hero h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
-      .portrait-card { width: min(280px, 90%); padding: 12px; }
+      .portrait-card {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 24px 16px 28px;
+        border-inline: 0;
+        border-radius: 0;
+      }
+      .portrait-card::before { display: none; }
       .portrait-card img { width: 150px; }
       .hero-actions { flex-direction: column; }
       .hero-actions .btn { width: 100%; }
