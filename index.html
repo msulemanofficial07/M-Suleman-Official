@@ -282,6 +282,10 @@
       gap: 8px;
       margin-top: 12px;
     }
+    .portrait-stat-link {
+      display: block;
+      color: inherit;
+    }
     .portrait-stat {
       min-width: 0;
       padding: 10px 8px;
@@ -289,6 +293,13 @@
       border-radius: 10px;
       background: var(--canvas);
       text-align: center;
+      transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+    }
+    .portrait-stat-link:hover .portrait-stat,
+    .portrait-stat-link:focus-visible .portrait-stat {
+      border-color: #b9c5df;
+      background: #eef3fb;
+      transform: translateY(-2px);
     }
     .portrait-stat strong {
       display: block;
@@ -589,7 +600,7 @@
       .main-nav a { display: block; padding: 10px 12px; border-radius: 8px; }
       .main-nav a:hover { background: var(--canvas); }
       .menu-toggle { display: block; }
-      .hero-grid { grid-template-columns: 1fr 290px; gap: 38px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 38px; }
       .skills-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
       .platforms-grid { grid-template-columns: repeat(2, 1fr); }
       .hire-grid { grid-template-columns: repeat(3, 1fr); }
@@ -600,10 +611,11 @@
       .container { width: min(100% - 32px, 1120px); }
       section { padding: 68px 0; }
       .main-nav ul { width: calc(100% - 32px); }
-      .hero { min-height: auto; padding: 48px 0 64px; }
+      .hero { min-height: auto; padding: 32px 0 40px; }
       .hero-grid { grid-template-columns: 1fr; gap: 38px; }
       .hero h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
-      .portrait-card { width: min(300px, 86%); }
+      .portrait-card { width: min(280px, 90%); padding: 12px; }
+      .portrait-card img { width: 150px; }
       .hero-actions { flex-direction: column; }
       .hero-actions .btn { width: 100%; }
       .about-layout { grid-template-columns: 1fr; gap: 24px; }
@@ -666,8 +678,12 @@
           </figcaption>
           <p class="portrait-role">Political Science Student • Researcher • Content Creator • Digital Marketing Specialist</p>
           <div class="portrait-stats" aria-label="Professional overview">
-            <div class="portrait-stat"><strong>10+</strong><span>Skills</span></div>
-            <div class="portrait-stat"><strong>4+</strong><span>Platforms</span></div>
+            <a class="portrait-stat-link" href="#skills" aria-label="View 8 skills">
+              <div class="portrait-stat"><strong>8</strong><span>Skills</span></div>
+            </a>
+            <a class="portrait-stat-link" href="#social" aria-label="View 8 platforms">
+              <div class="portrait-stat"><strong>8</strong><span>Platforms</span></div>
+            </a>
             <div class="portrait-stat"><strong>100%</strong><span>Passionate</span></div>
             <div class="portrait-stat"><strong>24/7</strong><span>Growth Focus</span></div>
           </div>
