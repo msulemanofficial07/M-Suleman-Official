@@ -512,10 +512,24 @@
     .contact-details a, .contact-details span {
       color: #dce3ef;
       font-weight: 700;
+      overflow-wrap: anywhere;
     }
     .contact-side .contact-details a, .contact-side .contact-details span { color: var(--ink); }
     .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-    .contact-actions .btn-primary { background: var(--orange); }
+    .contact-actions .btn {
+      min-height: 52px;
+      color: #fff;
+    }
+    .contact-actions .btn-whatsapp {
+      background: #20b858;
+      box-shadow: 0 10px 22px rgba(32, 184, 88, 0.2);
+    }
+    .contact-actions .btn-whatsapp:hover { background: #168f42; }
+    .contact-actions .btn-email {
+      background: #d93025;
+      box-shadow: 0 10px 22px rgba(217, 48, 37, 0.18);
+    }
+    .contact-actions .btn-email:hover { background: #b3261e; }
 
     footer { padding: 42px 0 28px; border-top: 1px solid var(--line); background: #fff; }
     .footer-grid {
@@ -769,8 +783,8 @@
           <h3>Choose a channel</h3>
           <p>Have a project idea or want to work together?</p>
           <div class="contact-actions">
-            <a class="btn btn-primary" href="https://wa.me/923404714747" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a class="btn btn-secondary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=msulemanofficial07@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/923404714747" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="btn btn-email" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=msulemanofficial07@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a>
           </div>
         </aside>
       </div>
