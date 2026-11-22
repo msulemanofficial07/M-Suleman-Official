@@ -143,7 +143,7 @@
     .menu-overlay { display: none; }
 
     .hero {
-      min-height: calc(100vh - 72px);
+      min-height: 520px;
       display: flex;
       align-items: center;
       padding: 64px 0;
@@ -155,9 +155,10 @@
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+      grid-template-columns: 1fr;
       align-items: center;
-      gap: clamp(48px, 8vw, 96px);
+      justify-items: center;
+      gap: 0;
     }
     .hero-kicker {
       display: inline-flex;
@@ -221,11 +222,12 @@
 
     .portrait-card {
       position: relative;
-      max-width: 330px;
+      width: min(520px, 100%);
+      max-width: 520px;
       margin-inline: auto;
-      padding: 18px;
+      padding: 16px;
       border: 1px solid var(--line);
-      border-radius: 28px;
+      border-radius: 24px;
       background: #fff;
       box-shadow: var(--shadow);
     }
@@ -241,11 +243,14 @@
       background: var(--orange-soft);
     }
     .portrait-card img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      border-radius: 18px;
+      width: 180px;
+      aspect-ratio: 1;
+      margin-inline: auto;
+      border: 5px solid #fff;
+      border-radius: 50%;
       object-fit: cover;
       object-position: center 20%;
+      box-shadow: 0 10px 28px rgba(16, 26, 47, 0.12);
     }
     .portrait-label {
       display: flex;
@@ -356,8 +361,8 @@
       gap: 14px;
     }
     .skill-card {
-      min-height: 220px;
-      padding: 22px;
+      min-height: 178px;
+      padding: 16px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: #fff;
@@ -370,11 +375,11 @@
       box-shadow: 0 16px 36px rgba(16, 26, 47, 0.07);
     }
     .skill-icon {
-      width: 44px;
-      height: 44px;
+      width: 38px;
+      height: 38px;
       display: grid;
       place-items: center;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
       border-radius: 12px;
       background: var(--orange-soft);
       color: #a85f21;
@@ -382,10 +387,10 @@
       font-size: 0.78rem;
       font-weight: 800;
     }
-    .skill-card h3 { min-height: 48px; margin-bottom: 10px; color: var(--navy); font-size: 1.04rem; }
-    .skill-card p { margin: 0; color: var(--muted); font-size: 0.88rem; }
+    .skill-card h3 { min-height: 40px; margin-bottom: 6px; color: var(--navy); font-size: 0.96rem; }
+    .skill-card p { margin: 0; color: var(--muted); font-size: 0.82rem; line-height: 1.45; }
     .skill-card details {
-      margin-top: 14px;
+      margin-top: 8px;
       color: var(--muted);
       font-size: 0.84rem;
     }
@@ -610,7 +615,7 @@
       .hero { min-height: auto; padding: 48px 0 64px; }
       .hero-grid { grid-template-columns: 1fr; gap: 38px; }
       .hero h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
-      .portrait-card { width: min(330px, 86%); }
+      .portrait-card { width: min(300px, 86%); }
       .hero-actions { flex-direction: column; }
       .hero-actions .btn { width: 100%; }
       .about-layout { grid-template-columns: 1fr; gap: 24px; }
@@ -670,15 +675,6 @@
   <main id="main">
     <section class="hero" id="home">
       <div class="container hero-grid">
-        <div>
-          <h1>Muhammad Suleman</h1>
-          <p class="hero-role">Political Science Student | Content Creator | Digital Marketing Specialist</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#skills">Explore my skills</a>
-            <a class="btn btn-secondary" href="#brands">Explore my brands</a>
-            <a class="btn btn-secondary" href="#contact">Contact me</a>
-          </div>
-        </div>
         <figure class="portrait-card">
           <img src="ChatGPT Image Jun 5, 2026, 01_36_18 AM.png" alt="Portrait of Muhammad Suleman">
           <figcaption class="portrait-label">
