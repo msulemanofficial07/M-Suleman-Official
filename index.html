@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Suleman | Official Portfolio</title>
-  <meta name="description" content="Muhammad Suleman is a Political Science Researcher, Digital Marketing Specialist, SEO expert, and content creator focused on research, education, branding, and digital growth.">
+  <title>Muhammad Suleman | Political Science Student & Digital Marketing Specialist</title>
+  <meta name="description" content="Explore Muhammad Suleman's portfolio, Political Science and research interests, content creation, digital marketing, SEO, website development, and e-commerce expertise.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -1325,6 +1325,193 @@
         transition-duration: 0.01ms !important;
       }
     }
+
+    section[id] { scroll-margin-top: 32px; }
+
+    .skill-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.25rem;
+    }
+
+    .skill-links a {
+      padding: 0.45rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .skill-links a:hover {
+      border-color: var(--primary-2);
+      color: var(--primary-2);
+      transform: translateY(-1px);
+    }
+
+    .education-card {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .education-card h3 { color: var(--primary); font-size: 1.35rem; margin-bottom: 0.45rem; }
+    .education-card p { color: var(--muted); }
+
+    .skills-grid,
+    .brands-grid,
+    .sdf-services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .skill-card,
+    .brand-card,
+    .sdf-service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .skill-card:hover,
+    .brand-card:hover,
+    .sdf-service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+    }
+
+    .skill-card h3,
+    .brand-card h3,
+    .sdf-service-card h3 {
+      color: var(--primary);
+      margin: 0.35rem 0 0.55rem;
+    }
+
+    .skill-card > p,
+    .brand-card > p,
+    .brand-card li,
+    .sdf-service-card p { color: var(--muted); }
+
+    .skill-list,
+    .focus-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.45rem 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .skill-list li,
+    .focus-list li {
+      position: relative;
+      padding-left: 1rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .skill-list li::before,
+    .focus-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .brand-logo {
+      width: 68px;
+      height: 68px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1rem;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .brand-card.sdf .brand-logo {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+
+    .brand-kicker,
+    .brand-mission,
+    .brand-tagline { color: var(--primary-2) !important; font-weight: 700; }
+    .brand-card .btn,
+    .sdf-service-card .btn { margin-top: 1.1rem; }
+    .brand-card .focus-list { grid-template-columns: 1fr; }
+
+    .service-intro {
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .project-cta {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .project-cta h3 { color: #fff; margin-bottom: 0.25rem; }
+
+    .contact-details {
+      display: grid;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .contact-details a,
+    .contact-details span { color: #dbeafe; }
+    .nav-wrap nav { min-height: 0; overflow-y: auto; }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.45rem 1rem;
+      margin: 1rem 0;
+    }
+
+    .footer-links a {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .skills-grid,
+      .brands-grid,
+      .sdf-services-grid { grid-template-columns: 1fr; }
+      .skill-list { grid-template-columns: 1fr; }
+      .project-cta {
+        grid-column: auto;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .skill-links { justify-content: center; }
+    }
   </style>
 </head>
 <body>
@@ -1340,7 +1527,7 @@
     <div class="container nav-wrap">
       <div class="sidebar-profile">
         <div class="avatar-wrap">
-          <img src="ChatGPT Image Jun 5, 2026, 01_36_18 AM.png" alt="Muhammad Suleman profile picture">
+          <img src="ChatGPT Image Jun 5, 2026, 01_36_18 AM.png" alt="Portrait of Muhammad Suleman">
         </div>
         <div>
           <h3>Muhammad Suleman</h3>
@@ -1351,8 +1538,11 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Me</a></li>
-          <li><a href="#services">Explore My Skills</a></li>
-          <li><a href="#social">Explore My Brands</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#brands">My Brands</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#social">Platforms</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -1360,184 +1550,363 @@
     </div>
   </header>
 
+
   <main id="main">
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="typing-wrap">
-        <p id="typingText" class="typing-text">WELCOME TO MY PERSONAL PORTFOLIO</p>
-      </div>
-      <div class="hero-grid">
-        <div class="hero-card">
-          <div class="avatar-wrap">
-            <img src="ChatGPT Image Jun 5, 2026, 01_36_18 AM.png" alt="Muhammad Suleman profile picture">
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="typing-wrap">
+          <p id="typingText" class="typing-text">WELCOME TO MY PERSONAL PORTFOLIO</p>
+        </div>
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div class="avatar-wrap">
+              <img src="ChatGPT Image Jun 5, 2026, 01_36_18 AM.png" alt="Portrait of Muhammad Suleman">
+            </div>
+            <h3>Muhammad Suleman</h3>
+            <p>Political Science Student | Content Creator | Digital Marketing Specialist</p>
           </div>
-          <h3>Muhammad Suleman</h3>
-          <p>Research-driven strategist focused on knowledge, content, and digital growth</p>
-          <div class="mini-grid">
-            <div class="mini-box"><strong>10+</strong><span>Skills</span></div>
-            <div class="mini-box"><strong>4+</strong><span>Platforms</span></div>
-            <div class="mini-box"><strong>100%</strong><span>Passionate</span></div>
-            <div class="mini-box"><strong>24/7</strong><span>Growth Focus</span></div>
+
+          <div class="hero-text">
+            <h1>Muhammad Suleman</h1>
+            <h2>Political Science Student | Content Creator | Digital Marketing Specialist</h2>
+            <p>I am a Political Science student, content creator, and digital marketing professional with a strong foundation in research, communication, and digital technologies. I specialize in digital marketing, SEO, website development, and e-commerce, combining strategic thinking, creativity, and technical skills to build effective digital solutions and meaningful online experiences.</p>
+            <p>My work brings together knowledge, content, and technology to create value, solve problems, and support digital growth.</p>
+            <div class="hero-actions">
+              <a href="#skills" class="btn btn-primary">Explore My Skills</a>
+              <a href="#brands" class="btn btn-secondary">Explore My Brands</a>
+              <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+            <nav class="skill-links" aria-label="Jump to skill details">
+              <a href="#skill-political-science">Political Science</a>
+              <a href="#skill-content">Content</a>
+              <a href="#skill-marketing">Marketing</a>
+              <a href="#skill-seo">SEO</a>
+              <a href="#skill-local-seo">Local SEO</a>
+              <a href="#skill-web">Web</a>
+              <a href="#skill-ecommerce">E-commerce</a>
+              <a href="#skill-branding">Branding</a>
+            </nav>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="hero-text">
-          <h1>Muhammad Suleman</h1>
-          <h2>Political Science Student | Content Creator | Digital Marketing Specialist</h2>
-          <p>I am a Political Science student, content creator, and digital marketing professional with a strong foundation in research, communication, and digital technologies. I specialize in digital marketing, SEO, website development, and e-commerce, combining strategic thinking, creativity, and technical skills to build effective digital solutions and meaningful online experiences.</p>
-          <p>My work brings together knowledge, content, and technology to create value, solve problems, and support digital growth.</p>
-          <div class="hero-actions">
-            <a href="#services" class="btn btn-primary">Explore My Skills</a>
-            <a href="#social" class="btn btn-secondary">Explore My Brands</a>
-            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    <section id="about">
+      <div class="container about-grid">
+        <article class="about-card">
+          <header class="section-header about-heading">
+            <h2>About Me</h2>
+          </header>
+          <h3>A Journey of Knowledge, Creativity &amp; Digital Growth</h3>
+          <p>I am Muhammad Suleman, a Political Science student, content creator, and digital marketing professional with a passion for research, communication, technology, and continuous learning.</p>
+          <p>My academic journey in Political Science has developed my interest in political systems, governance, international relations, public affairs, and social issues. I enjoy exploring complex subjects, understanding different perspectives, and presenting information in a clear and meaningful way.</p>
+          <p>Beyond academics, I work in digital content creation and have developed expertise in digital marketing, search engine optimization (SEO), website development, and e-commerce. I am interested in combining creativity, research, and technology to build useful digital experiences and support online growth.</p>
+          <p>I have established two brands with different purposes: M Suleman Official, focused on educational and informative content, and Suleman Digital Frontier, focused on digital services and solutions.</p>
+          <p>My long-term goal is to grow as a knowledgeable professional, create meaningful digital projects, and build opportunities through research, communication, creativity, and technology.</p>
+          <blockquote class="quote">My Philosophy: Learn continuously. Think critically. Create meaningfully. Build for the future.</blockquote>
+        </article>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <header class="section-header">
+          <h2>Education</h2>
+        </header>
+        <article class="education-card">
+          <h3>Political Science</h3>
+          <p>My academic journey as a Political Science student has developed my interest in political systems, governance, international relations, public affairs, and social issues. It continues to support my research, critical analysis, and approach to informative communication.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <header class="section-header">
+          <h2>Skills &amp; Expertise</h2>
+          <p>Knowledge, Strategy &amp; Digital Capabilities — I bring together research, content creation, and digital expertise to develop informative content, strengthen online presence, and build practical digital solutions.</p>
+        </header>
+        <div class="skills-grid">
+          <article class="skill-card" id="skill-political-science">
+            <div class="icon-box" aria-hidden="true">PS</div>
+            <h3>Political Science &amp; Research</h3>
+            <p>Research and analysis across political systems, public affairs, and international subjects.</p>
+            <ul class="skill-list">
+              <li id="skill-political-science-list">Political Science</li>
+              <li id="skill-political-research">Political Research</li>
+              <li id="skill-current-affairs">Current Affairs Analysis</li>
+              <li id="skill-international-relations">International Relations</li>
+              <li id="skill-critical-analysis">Critical Analysis</li>
+              <li id="skill-information-research">Information Research</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" id="skill-content">
+            <div class="icon-box" aria-hidden="true">CC</div>
+            <h3>Content Creation</h3>
+            <p>Planning and producing clear, educational, and engaging digital content.</p>
+            <ul class="skill-list">
+              <li id="skill-content-planning">Content Planning</li>
+              <li id="skill-content-strategy">Content Strategy</li>
+              <li id="skill-scriptwriting">Scriptwriting</li>
+              <li id="skill-educational-content">Educational Content</li>
+              <li id="skill-social-content">Social Media Content</li>
+              <li id="skill-storytelling">Storytelling</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" id="skill-marketing">
+            <div class="icon-box" aria-hidden="true">DM</div>
+            <h3>Digital Marketing</h3>
+            <p>Strategic communication and content approaches that support digital growth.</p>
+            <ul class="skill-list">
+              <li id="skill-digital-marketing">Digital Marketing Strategy</li>
+              <li id="skill-brand-development">Brand Development</li>
+              <li id="skill-content-marketing">Content Marketing</li>
+              <li id="skill-social-marketing">Social Media Marketing</li>
+              <li id="skill-audience-research">Audience Research</li>
+              <li id="skill-marketing-strategy">Marketing Strategy</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" id="skill-seo">
+            <div class="icon-box" aria-hidden="true">SEO</div>
+            <h3>Search Engine Optimization (SEO)</h3>
+            <p>Research-based optimization for stronger search relevance and website organization.</p>
+            <ul class="skill-list">
+              <li id="skill-keyword-research">Keyword Research</li>
+              <li id="skill-on-page-seo">On-Page SEO</li>
+              <li id="skill-technical-seo">Technical SEO</li>
+              <li id="skill-off-page-seo">Off-Page SEO</li>
+              <li id="skill-competitor-analysis">Competitor Analysis</li>
+              <li id="skill-content-optimization">Content Optimization</li>
+              <li id="skill-seo-audits">SEO Audits</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" id="skill-local-seo">
+            <div class="icon-box" aria-hidden="true">LSEO</div>
+            <h3>Local SEO</h3>
+            <p>Local search strategies based on geographic relevance and market research.</p>
+            <ul class="skill-list">
+              <li id="skill-local-keywords">Local Keyword Research</li>
+              <li id="skill-google-business">Google Business Profile Optimization</li>
+              <li id="skill-local-competitors">Local Competitor Research</li>
+              <li id="skill-local-visibility">Local Search Visibility</li>
+              <li id="skill-local-strategy">Local SEO Strategy</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" id="skill-web">
+            <div class="icon-box" aria-hidden="true">WEB</div>
+            <h3>Website Development</h3>
+            <p>Structured, responsive websites designed for clear access and useful digital experiences.</p>
+            <ul class="skill-list">
+              <li id="skill-wordpress">WordPress</li>
+              <li id="skill-web-structure">Website Structure and Design</li>
+              <li id="skill-html">HTML</li>
+              <li id="skill-css">CSS</li>
+              <li id="skill-responsive-design">Responsive Website Design</li>
+              <li id="skill-web-optimization">Website Optimization</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" id="skill-ecommerce">
+            <div class="icon-box" aria-hidden="true">EC</div>
+            <h3>E-commerce</h3>
+            <p>Store organization and product presentation for clear and practical online shopping.</p>
+            <ul class="skill-list">
+              <li id="skill-shopify">Shopify</li>
+              <li id="skill-store-development">E-commerce Store Development</li>
+              <li id="skill-product-research">Product Research</li>
+              <li id="skill-product-pages">Product Page Optimization</li>
+              <li id="skill-store-structure">Store Structure</li>
+              <li id="skill-ecommerce-seo">E-commerce SEO</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" id="skill-branding">
+            <div class="icon-box" aria-hidden="true">BC</div>
+            <h3>Branding &amp; Creative Content</h3>
+            <p>Consistent visual and written communication that supports brand identity.</p>
+            <ul class="skill-list">
+              <li id="skill-brand-identity">Brand Identity</li>
+              <li id="skill-content-writing">Content Writing</li>
+              <li id="skill-copywriting">Copywriting</li>
+              <li id="skill-video-editing">Video Editing</li>
+              <li id="skill-social-branding">Social Media Branding</li>
+              <li id="skill-visual-planning">Visual Content Planning</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="brands">
+      <div class="container">
+        <header class="section-header">
+          <h2>My Brands</h2>
+          <p>Building Ideas into Digital Platforms — knowledge, creativity, and technology used to build platforms that provide value and create meaningful opportunities.</p>
+        </header>
+        <div class="brands-grid">
+          <article class="brand-card">
+            <div class="brand-logo" aria-label="M Suleman Official brand logo">MSO</div>
+            <h3>M Suleman Official</h3>
+            <p class="brand-kicker">Educational Content | Knowledge | Awareness</p>
+            <p>M Suleman Official is my Urdu content brand, dedicated to creating educational, informative, and awareness-based content.</p>
+            <ul class="focus-list">
+              <li>Political Science and Current Affairs</li>
+              <li>Social Issues</li>
+              <li>History</li>
+              <li>Science and Technology</li>
+              <li>Space and the Universe</li>
+              <li>Educational Videos and Podcasts</li>
+            </ul>
+            <p class="brand-mission">Mission: To make useful knowledge accessible through informative, engaging, and thought-provoking content.</p>
+            <a class="btn btn-secondary" href="https://www.youtube.com/@MuhammadSuleman-07" target="_blank" rel="noopener noreferrer">Explore M Suleman Official</a>
+          </article>
+
+          <article class="brand-card sdf">
+            <div class="brand-logo" aria-label="Suleman Digital Frontier brand logo">SDF</div>
+            <h3>Suleman Digital Frontier (SDF)</h3>
+            <p class="brand-kicker">Digital Marketing | SEO | Website Development</p>
+            <p>Suleman Digital Frontier is my digital services brand, focused on helping individuals, entrepreneurs, and businesses strengthen their digital presence.</p>
+            <ul class="focus-list">
+              <li>Digital Marketing</li>
+              <li>SEO and Local SEO</li>
+              <li>Niche and Competitor Research</li>
+              <li>Website Development</li>
+              <li>E-commerce Solutions</li>
+              <li>Content Strategy and Branding</li>
+            </ul>
+            <p class="brand-tagline">Tagline: Building the Digital Future.</p>
+            <p class="brand-mission">Mission: To deliver practical digital solutions that help businesses establish, improve, and grow their online presence.</p>
+            <a class="btn btn-primary" href="#services">Explore SDF Services</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <header class="section-header">
+          <h2>Digital Services</h2>
+          <p>Services by Suleman Digital Frontier — practical digital solutions designed to help businesses build their online presence, understand their markets, and improve their digital performance.</p>
+        </header>
+        <div class="sdf-services-grid">
+          <article class="sdf-service-card" id="service-niche-research">
+            <div class="icon-box" aria-hidden="true">NR</div>
+            <h3>Niche Research</h3>
+            <p>Research and evaluation of potential niches using market demand, competition, audience interests, and business opportunities.</p>
+          </article>
+          <article class="sdf-service-card" id="service-competitor-analysis">
+            <div class="icon-box" aria-hidden="true">CA</div>
+            <h3>Competitor Analysis</h3>
+            <p>Analysis of competitors' websites, content strategies, keywords, strengths, weaknesses, and online positioning.</p>
+          </article>
+          <article class="sdf-service-card" id="service-seo">
+            <div class="icon-box" aria-hidden="true">SEO</div>
+            <h3>SEO Services</h3>
+            <p>Search engine optimization focused on keyword research, on-page improvements, technical considerations, content optimization, and organic search visibility.</p>
+          </article>
+          <article class="sdf-service-card" id="service-local-seo">
+            <div class="icon-box" aria-hidden="true">LSEO</div>
+            <h3>Local SEO</h3>
+            <p>Local search optimization to help businesses improve their visibility in relevant geographic searches and strengthen their local online presence.</p>
+          </article>
+          <article class="sdf-service-card" id="service-web-development">
+            <div class="icon-box" aria-hidden="true">WEB</div>
+            <h3>Website Development</h3>
+            <p>Creation of structured, responsive, and user-friendly websites designed around business goals and audience needs.</p>
+          </article>
+          <article class="sdf-service-card" id="service-ecommerce">
+            <div class="icon-box" aria-hidden="true">EC</div>
+            <h3>E-commerce Solutions</h3>
+            <p>Support with e-commerce website development, Shopify store setup, product presentation, and store optimization.</p>
+          </article>
+          <article class="sdf-service-card" id="service-content">
+            <div class="icon-box" aria-hidden="true">CW</div>
+            <h3>Content Strategy &amp; Writing</h3>
+            <p>Content planning, research, website content, SEO-focused writing, and marketing copy designed for specific audiences.</p>
+          </article>
+          <article class="sdf-service-card" id="service-branding">
+            <div class="icon-box" aria-hidden="true">BD</div>
+            <h3>Branding &amp; Digital Strategy</h3>
+            <p>Support with brand positioning, digital identity, content direction, and online growth planning.</p>
+          </article>
+          <div class="project-cta">
+            <div>
+              <h3>Let's Build Your Digital Presence.</h3>
+              <p>Have a project in mind? Let's discuss how the right digital strategy can support your goals.</p>
+            </div>
+            <a class="btn btn-primary" href="#contact">Discuss a Project</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about">
-    <div class="container about-grid">
-      <div class="about-card">
-        <div class="section-header about-heading">
-          <h2>About Me</h2>
+    <section id="social">
+      <div class="container">
+        <header class="section-header">
+          <h2>My Platforms</h2>
+          <p>Connect with me across major platforms for content, updates, and professional collaboration.</p>
+        </header>
+        <div class="social-grid">
+          <article class="social-card"><div class="icon-box" aria-hidden="true">YT</div><h3>YouTube</h3><p>M Suleman Official</p><a href="https://www.youtube.com/@MuhammadSuleman-07" target="_blank" rel="noopener noreferrer">Visit Channel</a></article>
+          <article class="social-card"><div class="icon-box" aria-hidden="true">TT</div><h3>TikTok</h3><p>@m.suleman_official</p><a href="https://www.tiktok.com/@m.suleman_official?_r=1&amp;_t=ZS-9A55E45tjl6" target="_blank" rel="noopener noreferrer">Follow Now</a></article>
+          <article class="social-card"><div class="icon-box" aria-hidden="true">f</div><h3>Facebook Profile</h3><p>Personal profile</p><a href="https://www.facebook.com/share/19hrTnwHkv/" target="_blank" rel="noopener noreferrer">View Profile</a></article>
+          <article class="social-card"><div class="icon-box" aria-hidden="true">f</div><h3>Facebook</h3><p>M Suleman Official page</p><a href="https://www.facebook.com/share/1DbyynYGL2/" target="_blank" rel="noopener noreferrer">Open Page</a></article>
+          <article class="social-card"><div class="icon-box" aria-hidden="true">IG</div><h3>Instagram</h3><p>@m.suleman_official</p><a href="https://www.instagram.com/m.suleman_official?stkn=MXZ5eG92YnV6bjBvMQ==" target="_blank" rel="noopener noreferrer">View Instagram</a></article>
+          <article class="social-card"><div class="icon-box" aria-hidden="true">in</div><h3>LinkedIn</h3><p>Professional profile</p><a href="https://www.linkedin.com/in/muhammad-suleman-7b7760407/" target="_blank" rel="noopener noreferrer">Connect</a></article>
+          <article class="social-card"><div class="icon-box" aria-hidden="true">FW</div><h3>Freelance</h3><p>Fiverr / Upwork</p><a href="https://www.fiverr.com/msuleman_01" target="_blank" rel="noopener noreferrer">Hire Me</a></article>
         </div>
-        <p>
-          I am a Political Science student, content creator, and digital marketing professional with a strong foundation in research, communication, and digital technologies. I specialize in digital marketing, SEO, website development, and e-commerce, combining strategic thinking, creativity, and technical skills to build effective digital solutions and meaningful online experiences.
-        </p>
-        <p>My work brings together knowledge, content, and technology to create value, solve problems, and support digital growth.</p>
-        <div class="quote">“Knowledge is not power until it serves humanity.”</div>
       </div>
-      <div class="panel hidden">
-        <ul class="highlight-list">
-          <li><span>01</span><div><strong>Political Insight</strong><br>Research, analysis, and understanding of public affairs.</div></li>
-          <li><span>02</span><div><strong>Journalism & Storytelling</strong><br>Clear communication, research-backed writing, and strong narratives.</div></li>
-          <li><span>03</span><div><strong>Digital Strategy</strong><br>Brand building, content planning, and growth-focused execution.</div></li>
-          <li><span>04</span><div><strong>Creative & Technical Skills</strong><br>SEO, web design, e-commerce, and video editing.</div></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="services">
-    <div class="container">
-      <div class="section-header">
-        <h2>Areas of Expertise</h2>
-        <p>Skills and disciplines I use to create useful, engaging, and growth-focused digital solutions.</p>
+    <section id="contact">
+      <div class="container contact-wrap">
+        <article class="contact-card">
+          <h3>Let's connect</h3>
+          <p>For collaborations, digital projects, content creation, SEO support, or business inquiries, feel free to reach out.</p>
+          <div class="contact-details">
+            <a href="https://wa.me/923404714747" target="_blank" rel="noopener noreferrer">WhatsApp: +92 340 4714747</a>
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=msulemanofficial07@gmail.com" target="_blank" rel="noopener noreferrer">Email: msulemanofficial07@gmail.com</a>
+            <span>Location: Pakistan</span>
+          </div>
+        </article>
+        <aside class="contact-side">
+          <h3>Start a conversation</h3>
+          <p>Have a project idea or want to work together? I’m ready to connect.</p>
+          <div class="contact-actions">
+            <a href="https://wa.me/923404714747" class="btn contact-btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=msulemanofficial07@gmail.com" class="btn contact-btn-email" target="_blank" rel="noopener noreferrer">Email Me</a>
+          </div>
+        </aside>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="icon-box">PS</div>
-          <h3>Political Science & Research</h3>
-          <p>Research, critical analysis, public affairs, and evidence-based understanding.</p>
-        </div>
-        <div class="service-card">
-          <div class="icon-box">CC</div>
-          <h3>Content Creation</h3>
-          <p>Educational and engaging content for YouTube, TikTok, Facebook, and digital audiences.</p>
-        </div>
-        <div class="service-card">
-          <div class="icon-box">DM</div>
-          <h3>Digital Marketing</h3>
-          <p>Brand building, social strategy, campaigns, and growth-focused digital marketing.</p>
-        </div>
-        <div class="service-card">
-          <div class="icon-box">SEO</div>
-          <h3>Search Engine Optimization</h3>
-          <p>Keyword research, on-page optimization, website visibility, and sustainable organic growth.</p>
-        </div>
-        <div class="service-card">
-          <div class="icon-box">EC</div>
-          <h3>E-commerce</h3>
-          <p>Online business support, product presentation, store growth, and sales strategy.</p>
-        </div>
-        <div class="service-card">
-          <div class="icon-box">WD</div>
-          <h3>Web Design</h3>
-          <p>Modern, responsive, and professional web design for brands and personal websites.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="social">
-    <div class="container">
-      <div class="section-header">
-        <h2>My Platforms</h2>
-        <p>Connect with me across major platforms for content, updates, and professional collaboration.</p>
-      </div>
-      <div class="social-grid">
-        <div class="social-card">
-          <div class="icon-box" aria-hidden="true">YT</div>
-          <h3>YouTube</h3>
-          <p>M Suleman Official</p>
-          <a href="https://www.youtube.com/@MuhammadSuleman-07" target="_blank" rel="noopener noreferrer">Visit Channel</a>
-        </div>
-        <div class="social-card">
-          <div class="icon-box" aria-hidden="true">TT</div>
-          <h3>TikTok</h3>
-          <p>@m.suleman_official</p>
-          <a href="https://www.tiktok.com/@m.suleman_official?_r=1&amp;_t=ZS-9A55E45tjl6" target="_blank" rel="noopener noreferrer">Follow Now</a>
-        </div>
-        <div class="social-card">
-          <div class="icon-box" aria-hidden="true">f</div>
-          <h3>Facebook Profile</h3>
-          <p>Personal profile</p>
-          <a href="https://www.facebook.com/share/19hrTnwHkv/" target="_blank" rel="noopener noreferrer">View Profile</a>
-        </div>
-        <div class="social-card">
-          <div class="icon-box" aria-hidden="true">f</div>
-          <h3>Facebook</h3>
-          <p>M Suleman Official page</p>
-          <a href="https://www.facebook.com/share/1DbyynYGL2/" target="_blank" rel="noopener noreferrer">Open Page</a>
-        </div>
-        <div class="social-card">
-          <div class="icon-box" aria-hidden="true">IG</div>
-          <h3>Instagram</h3>
-          <p>@m.suleman_official</p>
-          <a href="https://www.instagram.com/m.suleman_official?stkn=MXZ5eG92YnV6bjBvMQ==" target="_blank" rel="noopener noreferrer">View Instagram</a>
-        </div>
-        <div class="social-card">
-          <div class="icon-box" aria-hidden="true">in</div>
-          <h3>LinkedIn</h3>
-          <p>Professional profile</p>
-          <a href="https://www.linkedin.com/in/muhammad-suleman-7b7760407/" target="_blank" rel="noopener noreferrer">Connect</a>
-        </div>
-        <div class="social-card">
-          <div class="icon-box" aria-hidden="true">FW</div>
-          <h3>Freelance</h3>
-          <p>Fiverr / Upwork</p>
-          <a href="https://www.fiverr.com/msuleman_01" target="_blank" rel="noopener noreferrer">Hire Me</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container contact-wrap">
-      <div class="contact-card">
-        <h3>Let’s connect</h3>
-        <p>For collaborations, digital projects, content creation, SEO support, or business inquiries, feel free to reach out.</p>
-        <div class="contact-links hidden">
-          <a href="https://wa.me/923404714747" target="_blank" rel="noopener noreferrer">📱 +92 340 4714747</a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=msulemanofficial07@gmail.com" target="_blank" rel="noopener noreferrer">📧 msulemanofficial07@gmail.com</a>
-          <a href="#home">📍 Pakistan</a>
-        </div>
-      </div>
-      <div class="contact-side">
-        <h3>Start a conversation</h3>
-        <p>Have a project idea or want to work together? I’m ready to connect.</p>
-        <div class="contact-actions">
-          <a href="https://wa.me/923404714747" class="btn contact-btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=msulemanofficial07@gmail.com" class="btn contact-btn-email" target="_blank" rel="noopener noreferrer">Email Me</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <footer>
-    <div class="container">© 2026 Muhammad Suleman | All Rights Reserved</div>
+    <div class="container">
+      <p><strong>Muhammad Suleman</strong></p>
+      <p>Political Science Student | Content Creator | Digital Marketing Specialist</p>
+      <p>Research. Create. Innovate. Grow.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills &amp; Expertise</a>
+        <a href="#brands">My Brands</a>
+        <a href="#services">Services</a>
+        <a href="#social">Platforms</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <nav class="footer-links" aria-label="Explore brands">
+        <a href="#brands">M Suleman Official</a>
+        <a href="#brands">Suleman Digital Frontier</a>
+      </nav>
+      <p>© 2026 Muhammad Suleman. All Rights Reserved.</p>
+    </div>
   </footer>
 
   <script>
