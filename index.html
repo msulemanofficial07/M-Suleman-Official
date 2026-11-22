@@ -144,14 +144,11 @@
 
     .hero {
       width: 100%;
-      min-height: 520px;
+      min-height: 480px;
       display: flex;
       align-items: center;
-      padding: 64px 0;
-      background:
-        radial-gradient(circle at 18% 18%, rgba(123, 157, 222, 0.16), transparent 28rem),
-        radial-gradient(circle at 82% 82%, rgba(217, 133, 50, 0.10), transparent 22rem),
-        linear-gradient(135deg, #17284a 0%, #101a2f 100%);
+      padding: 48px 0 60px;
+      background: linear-gradient(135deg, #edf2ff 0%, #e3eaf9 100%);
     }
     .hero-grid {
       display: grid;
@@ -159,6 +156,19 @@
       align-items: center;
       justify-items: center;
       gap: 0;
+    }
+    .hero-welcome {
+      display: inline-block;
+      margin: 0 auto 28px;
+      padding: 10px 24px;
+      border-radius: 999px;
+      background: linear-gradient(100deg, #17284a, #3559a8);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(27, 43, 75, 0.18);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-align: center;
     }
     .hero-kicker {
       display: inline-flex;
@@ -222,14 +232,15 @@
 
     .portrait-card {
       position: relative;
-      width: min(520px, 100%);
-      max-width: 520px;
+      width: min(530px, 100%);
+      max-width: 530px;
       margin-inline: auto;
-      padding: 16px;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: #fff;
-      box-shadow: var(--shadow);
+      padding: 28px 30px 32px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 28px;
+      background: linear-gradient(145deg, #17284a, #101a2f);
+      box-shadow: 0 24px 55px rgba(16, 26, 47, 0.2);
     }
     .portrait-card::before {
       content: "";
@@ -240,7 +251,7 @@
       height: 76%;
       z-index: -1;
       border-radius: 24px;
-      background: var(--orange-soft);
+      background: rgba(255, 255, 255, 0.05);
     }
     .portrait-card img {
       width: 180px;
@@ -254,12 +265,18 @@
     }
     .portrait-label {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      gap: 12px;
-      padding: 14px 4px 2px;
+      flex-direction: column;
+      gap: 6px;
+      padding: 16px 4px 2px;
     }
-    .portrait-label strong { color: var(--navy); }
+    .portrait-label strong {
+      color: #fff;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(1.35rem, 4vw, 1.8rem);
+      text-align: center;
+    }
     .portrait-label span {
       padding: 5px 8px;
       border-radius: 999px;
@@ -269,18 +286,19 @@
       font-weight: 800;
     }
     .portrait-role {
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 0.78rem;
-      font-weight: 700;
-      line-height: 1.5;
+      max-width: 380px;
+      margin: 8px auto 22px;
+      color: #d3dbea;
+      font-size: 0.96rem;
+      font-weight: 500;
+      line-height: 1.6;
       text-align: center;
     }
     .portrait-stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      margin-top: 12px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 0;
     }
     .portrait-stat-link {
       display: block;
@@ -288,22 +306,22 @@
     }
     .portrait-stat {
       min-width: 0;
-      padding: 10px 8px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: var(--canvas);
+      padding: 15px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
       text-align: center;
       transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
     }
     .portrait-stat-link:hover .portrait-stat,
     .portrait-stat-link:focus-visible .portrait-stat {
-      border-color: #b9c5df;
-      background: #eef3fb;
+      border-color: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.12);
       transform: translateY(-2px);
     }
     .portrait-stat strong {
       display: block;
-      color: var(--navy);
+      color: #fff;
       font-family: "Manrope", sans-serif;
       font-size: 1rem;
       line-height: 1.1;
@@ -311,8 +329,8 @@
     .portrait-stat span {
       display: block;
       margin-top: 4px;
-      color: var(--muted);
-      font-size: 0.72rem;
+      color: #d3dbea;
+      font-size: 0.9rem;
       font-weight: 700;
     }
 
@@ -554,22 +572,18 @@
       .main-nav ul { width: calc(100% - 32px); }
       .hero {
         min-height: 0;
-        padding: 24px 0 48px;
-        background:
-          radial-gradient(circle at 12% 10%, rgba(123, 157, 222, 0.18), transparent 14rem),
-          radial-gradient(circle at 88% 90%, rgba(217, 133, 50, 0.10), transparent 12rem),
-          linear-gradient(135deg, #17284a 0%, #101a2f 100%);
+        padding: 32px 0 48px;
+        background: linear-gradient(135deg, #edf2ff 0%, #e3eaf9 100%);
       }
-      .hero-grid { grid-template-columns: 1fr; gap: 38px; }
-      .hero .container { width: 100%; padding: 0; }
+      .hero-grid { grid-template-columns: 1fr; gap: 0; }
+      .hero-welcome { max-width: 100%; margin-bottom: 22px; padding: 10px 18px; font-size: 0.7rem; }
       .hero h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
       .portrait-card {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        padding: 24px 16px 28px;
-        border-inline: 0;
-        border-radius: 0;
+        width: min(530px, 100%);
+        max-width: 530px;
+        margin-inline: auto;
+        padding: 24px 18px 26px;
+        border-radius: 26px;
       }
       .portrait-card::before { display: none; }
       .portrait-card img { width: 150px; }
@@ -624,14 +638,16 @@
   <main id="main">
     <section class="hero" id="home">
       <div class="container hero-grid">
+        <p class="hero-welcome">WELCOME TO M. SULEMAN OFFICIAL</p>
         <figure class="portrait-card">
           <img src="ChatGPT Image Jun 5, 2026, 01_36_18 AM.png" alt="Portrait of Muhammad Suleman">
           <figcaption class="portrait-label">
             <strong>Muhammad Suleman</strong>
             <span>Pakistan</span>
           </figcaption>
-          <p class="portrait-role">Political Science Student • Researcher • Content Creator • Digital Marketing Specialist</p>
+          <p class="portrait-role">Political Scientist • Journalist • Researcher • Digital Marketing Specialist</p>
           <div class="portrait-stats" aria-label="Professional overview">
+            <div class="portrait-stat"><strong>10+</strong><span>Skills</span></div>
             <a class="portrait-stat-link" href="#social" aria-label="View 8 platforms">
               <div class="portrait-stat"><strong>8</strong><span>Platforms</span></div>
             </a>
