@@ -332,29 +332,6 @@
       font-weight: 800;
     }
 
-    .education-wrap {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      max-width: 920px;
-      margin-inline: auto;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: #fff;
-      box-shadow: 0 12px 35px rgba(16, 26, 47, 0.05);
-    }
-    .education-year {
-      display: grid;
-      place-items: center;
-      border-right: 1px solid var(--line);
-      color: var(--orange);
-      font-family: "Manrope", sans-serif;
-      font-size: 1.1rem;
-      font-weight: 800;
-    }
-    .education-content { padding: 30px; }
-    .education-content h3 { margin-bottom: 8px; color: var(--navy); }
-    .education-content p { margin: 0; color: var(--muted); }
-
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -621,8 +598,6 @@
       .about-layout { grid-template-columns: 1fr; gap: 24px; }
       .about-layout .section-heading { position: static; }
       .about-copy { padding: 24px; }
-      .education-wrap { grid-template-columns: 1fr; }
-      .education-year { min-height: 64px; border-right: 0; border-bottom: 1px solid var(--line); }
       .skills-grid, .brands-grid, .services-grid, .platforms-grid, .contact-wrap { grid-template-columns: 1fr; }
       .skill-card { min-height: 0; }
       .skill-card h3 { min-height: 0; }
@@ -661,7 +636,6 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Me</a></li>
-          <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#brands">My Brands</a></li>
           <li><a href="#services">Services</a></li>
@@ -704,22 +678,6 @@
           <p>I have established two brands with different purposes: M Suleman Official, focused on educational and informative content, and Suleman Digital Frontier, focused on digital services and solutions.</p>
           <p>My long-term goal is to grow as a knowledgeable professional, create meaningful digital projects, and build opportunities through research, communication, creativity, and technology.</p>
           <blockquote class="philosophy">Knowledge is not power until it serves humanity.</blockquote>
-        </article>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="container">
-        <header class="section-heading center">
-          <span class="eyebrow">Education</span>
-          <h2>Academic Foundation</h2>
-        </header>
-        <article class="education-wrap">
-          <div class="education-year">Political Science</div>
-          <div class="education-content">
-            <h3>Political Science Studies</h3>
-            <p>My academic journey has developed my interest in political systems, governance, international relations, public affairs, and social issues. It supports my research, critical analysis, and approach to informative communication.</p>
-          </div>
         </article>
       </div>
     </section>
@@ -874,7 +832,6 @@
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#home">Home</a>
         <a href="#about">About Me</a>
-        <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#brands">My Brands</a>
         <a href="#services">Services</a>
