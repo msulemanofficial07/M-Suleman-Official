@@ -374,6 +374,30 @@
     }
     .skill-card h3 { min-height: 48px; margin-bottom: 10px; color: var(--navy); font-size: 1.04rem; }
     .skill-card p { margin: 0; color: var(--muted); font-size: 0.88rem; }
+    .skill-card details {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+    .skill-card summary {
+      width: fit-content;
+      color: var(--blue);
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+    }
+    .skill-card summary::-webkit-details-marker { display: none; }
+    .skill-card summary::after {
+      content: " +";
+      color: var(--orange);
+    }
+    .skill-card details[open] summary::after { content: " −"; }
+    .skill-card details p {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      line-height: 1.55;
+    }
 
     .brands-grid {
       display: grid;
@@ -705,28 +729,36 @@
         </header>
         <div class="skills-grid">
           <article class="skill-card" id="skill-political-science">
-            <div class="skill-icon">PS</div><h3>Political Science &amp; Research</h3><p>Political science, political research, current affairs analysis, international relations, critical analysis, and information research.</p>
+            <div class="skill-icon">PS</div><h3>Political Science &amp; Research</h3><p>Research-led insight into politics, public affairs, and global issues.</p>
+            <details><summary>View details</summary><p>Political science, political research, current affairs analysis, international relations, critical analysis, and information research.</p></details>
           </article>
           <article class="skill-card" id="skill-content">
-            <div class="skill-icon">CC</div><h3>Content Creation</h3><p>Content planning, content strategy, scriptwriting, educational content, social media content, and storytelling.</p>
+            <div class="skill-icon">CC</div><h3>Content Creation</h3><p>Clear, engaging content planned around meaningful audiences.</p>
+            <details><summary>View details</summary><p>Content planning, content strategy, scriptwriting, educational content, social media content, and storytelling.</p></details>
           </article>
           <article class="skill-card" id="skill-marketing">
-            <div class="skill-icon">DM</div><h3>Digital Marketing</h3><p>Digital marketing strategy, brand development, content marketing, social media marketing, audience research, and marketing strategy.</p>
+            <div class="skill-icon">DM</div><h3>Digital Marketing</h3><p>Strategy-led communication for stronger digital brand presence.</p>
+            <details><summary>View details</summary><p>Digital marketing strategy, brand development, content marketing, social media marketing, audience research, and marketing strategy.</p></details>
           </article>
           <article class="skill-card" id="skill-seo">
-            <div class="skill-icon">SEO</div><h3>SEO</h3><p>Keyword research, on-page SEO, technical SEO, off-page SEO, competitor analysis, content optimization, and SEO audits.</p>
+            <div class="skill-icon">SEO</div><h3>SEO</h3><p>Search-focused research and practical website optimization.</p>
+            <details><summary>View details</summary><p>Keyword research, on-page SEO, technical SEO, off-page SEO, competitor analysis, content optimization, and SEO audits.</p></details>
           </article>
           <article class="skill-card" id="skill-local-seo">
-            <div class="skill-icon">LSEO</div><h3>Local SEO</h3><p>Local keyword research, Google Business Profile optimization, local competitor research, search visibility, and local strategy.</p>
+            <div class="skill-icon">LSEO</div><h3>Local SEO</h3><p>Improving visibility in relevant geographic search markets.</p>
+            <details><summary>View details</summary><p>Local keyword research, Google Business Profile optimization, local competitor research, local search visibility, and local SEO strategy.</p></details>
           </article>
           <article class="skill-card" id="skill-web">
-            <div class="skill-icon">WEB</div><h3>Website Development</h3><p>WordPress, website structure and design, HTML, CSS, responsive website design, and website optimization.</p>
+            <div class="skill-icon">WEB</div><h3>Website Development</h3><p>Structured, responsive websites built for clarity and usability.</p>
+            <details><summary>View details</summary><p>WordPress, website structure and design, HTML, CSS, responsive website design, and website optimization.</p></details>
           </article>
           <article class="skill-card" id="skill-ecommerce">
-            <div class="skill-icon">EC</div><h3>E-commerce</h3><p>Shopify, e-commerce store development, product research, product page optimization, store structure, and e-commerce SEO.</p>
+            <div class="skill-icon">EC</div><h3>E-commerce</h3><p>Practical store structure and product-focused digital presentation.</p>
+            <details><summary>View details</summary><p>Shopify, e-commerce store development, product research, product page optimization, store structure, and e-commerce SEO.</p></details>
           </article>
           <article class="skill-card" id="skill-branding">
-            <div class="skill-icon">BC</div><h3>Branding &amp; Creative Content</h3><p>Brand identity, content writing, copywriting, video editing, social media branding, and visual content planning.</p>
+            <div class="skill-icon">BC</div><h3>Branding &amp; Creative Content</h3><p>Consistent identity across words, visuals, and social platforms.</p>
+            <details><summary>View details</summary><p>Brand identity, content writing, copywriting, video editing, social media branding, and visual content planning.</p></details>
           </article>
         </div>
       </div>
